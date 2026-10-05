@@ -1,0 +1,1361 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#f6f7f8">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Mecánica">
+  <meta name="description" content="Escuela de mecánica de Josefine Auto: aprende a revisar los carros que compras.">
+  <title>Josefine Mecánica</title>
+    <link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjAgMTIwIj48cmVjdCB3aWR0aD0iMTIwIiBoZWlnaHQ9IjEyMCIgcng9IjI0IiBmaWxsPSIjMTQxNjFhIi8+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMjQgMTYpIHNjYWxlKDMpIiBmaWxsPSIjZTExZDJlIj48cGF0aCBkPSJNMjIuNyAxOS4zIDEzLjYgMTAuMmMuOS0yLjMuNC01LTEuNS02LjktMi0yLTUtMi40LTcuNC0xLjNsNC4zIDQuMy0zIDNMMS42IDVDLjQgNy40LjkgMTAuNCAyLjkgMTIuNGMxLjkgMS45IDQuNiAyLjQgNi45IDEuNWw5LjEgOS4xYy40LjQgMSAuNCAxLjQgMGwyLjMtMi4zYy41LS40LjUtMS4xLjEtMS40eiIvPjwvZz48cmVjdCB4PSIyMiIgeT0iMTAwIiB3aWR0aD0iMTkiIGhlaWdodD0iNCIgcng9IjIiIGZpbGw9IiMzNDM4YjgiLz48cmVjdCB4PSI0MSIgeT0iMTAwIiB3aWR0aD0iMTkiIGhlaWdodD0iNCIgZmlsbD0iI2ZmZmZmZiIvPjxyZWN0IHg9IjYwIiB5PSIxMDAiIHdpZHRoPSIxOSIgaGVpZ2h0PSI0IiBmaWxsPSIjZTExZDJlIi8+PHJlY3QgeD0iNzkiIHk9IjEwMCIgd2lkdGg9IjE5IiBoZWlnaHQ9IjQiIHJ4PSIyIiBmaWxsPSIjZDlhNjJhIi8+PC9zdmc+Cg==" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+/* Josefine Mecánica: misma identidad que Josefine Gestión (blanco taller, rojo carrera, esquinas suaves). */
+:root {
+  --acento: #e11d2e;
+  --acento-oscuro: #b3121f;
+  --fondo: #f6f7f8;
+  --capa: #eceef1;
+  --tarjeta: #ffffff;
+  --borde: #e1e4e8;
+  --texto: #14161a;
+  --suave: #5b6270;
+  --verde: #1f8a4c;
+  --ambar: #9a6f00;
+  --azul: #3438b8;
+  --rojo: #c8202b;
+  --oro: #d9a62a;
+  --hero: #14161a;
+  --sobre-hero: #ffffff;
+  --hero-etiqueta: #ff8a94;
+  --sobre-acento: #ffffff;
+  --invertido: #14161a;
+  --sobre-invertido: #ffffff;
+  --grave-fondo: #fde4e6;
+  --grave-texto: #a8161f;
+  --atencion-fondo: #fbf0d3;
+  --atencion-texto: #7a5800;
+  --leve-fondo: #dff3e7;
+  --leve-texto: #145c33;
+  --radio: 22px;
+  --nav: 64px;
+  color-scheme: light;
+}
+/* Modo oscuro: mismo carácter de taller, de noche */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --acento: #ff4153; --acento-oscuro: #e11d2e; --fondo: #0f1114; --capa: #1a1d22; --tarjeta: #16191d;
+    --borde: #2a2f36; --texto: #eef0f3; --suave: #9aa3b2; --verde: #4cc483; --ambar: #e3b341; --azul: #7b80ff;
+    --rojo: #ff5c66; --oro: #e2b23a; --hero: #1d2127; --sobre-hero: #ffffff; --hero-etiqueta: #ff8a94;
+    --sobre-acento: #ffffff; --invertido: #eef0f3; --sobre-invertido: #0f1114;
+    --grave-fondo: #3a1418; --grave-texto: #ff9aa2; --atencion-fondo: #3a2d0c; --atencion-texto: #f0c860;
+    --leve-fondo: #0f3221; --leve-texto: #8be0b1; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --acento: #ff4153; --acento-oscuro: #e11d2e; --fondo: #0f1114; --capa: #1a1d22; --tarjeta: #16191d;
+  --borde: #2a2f36; --texto: #eef0f3; --suave: #9aa3b2; --verde: #4cc483; --ambar: #e3b341; --azul: #7b80ff;
+  --rojo: #ff5c66; --oro: #e2b23a; --hero: #1d2127; --sobre-hero: #ffffff; --hero-etiqueta: #ff8a94;
+  --sobre-acento: #ffffff; --invertido: #eef0f3; --sobre-invertido: #0f1114;
+  --grave-fondo: #3a1418; --grave-texto: #ff9aa2; --atencion-fondo: #3a2d0c; --atencion-texto: #f0c860;
+  --leve-fondo: #0f3221; --leve-texto: #8be0b1; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--fondo); color: var(--texto);
+  font: 16px/1.5 "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased; -webkit-tap-highlight-color: transparent;
+}
+h1, h2, h3 { font-family: "Chakra Petch", sans-serif; text-transform: uppercase; letter-spacing: .02em; margin: 0; line-height: 1.2; text-wrap: balance; }
+h2 { font-size: 1.05rem; margin-top: 8px; }
+h3 { font-size: 1rem; margin-bottom: 8px; }
+h4 { font-size: .8rem; text-transform: uppercase; letter-spacing: .05em; color: var(--suave); margin: 12px 0 4px; }
+p { margin: 0; }
+p + p { margin-top: 10px; }
+a { color: var(--texto); }
+button { font: inherit; color: inherit; }
+:focus-visible { outline: 2px solid var(--acento); outline-offset: 2px; }
+.suave { color: var(--suave); }
+
+/* Cabecera */
+.cabecera {
+  position: sticky; top: 0; z-index: 10;
+  padding: calc(env(safe-area-inset-top, 0px) + 12px) 16px 12px;
+  background: color-mix(in srgb, var(--fondo) 92%, transparent); backdrop-filter: blur(10px);
+  box-shadow: 0 1px 0 var(--borde);
+  display: flex; align-items: baseline; justify-content: space-between; gap: 12px;
+}
+.cabecera::after { content: ""; position: absolute; left: 0; right: 0; bottom: -4px; height: 3px; background: linear-gradient(90deg, var(--azul) 0 25%, var(--texto) 25% 50%, var(--rojo) 50% 75%, var(--oro) 75%); }
+.cabecera h1 { font-size: 1.2rem; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.marca { font-family: "Chakra Petch", sans-serif; text-transform: uppercase; font-size: .8rem; color: var(--suave); white-space: nowrap; }
+.marca b { color: var(--acento); }
+
+/* Contenido */
+.vista {
+  max-width: 720px; margin: 0 auto;
+  padding-inline: 16px;
+  padding-block: 20px calc(var(--nav) + env(safe-area-inset-bottom, 0px) + 28px);
+  display: grid; gap: 14px;
+}
+.vista > * { min-width: 0; }
+
+.tarjeta { background: var(--tarjeta); border: 1px solid var(--borde); border-radius: var(--radio); padding: 18px; display: block; text-decoration: none; }
+.tarjeta--hero { background: var(--hero); color: var(--sobre-hero); border-color: var(--hero); }
+.tarjeta--hero h2 { font-size: 1.35rem; margin: 4px 0 8px; }
+.tarjeta--hero .etiqueta { color: var(--hero-etiqueta); }
+.tarjeta--dato { border-left: 4px solid var(--acento); }
+.tarjeta--enlace { transition: border-color .15s; }
+.tarjeta--enlace:hover { border-color: var(--acento); }
+.etiqueta { font-size: .75rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--acento); }
+
+.cifras { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.cifra { background: var(--tarjeta); border: 1px solid var(--borde); border-radius: 16px; padding: 12px; display: grid; gap: 2px; }
+.cifra b { font-family: "Chakra Petch", sans-serif; font-size: 1.4rem; }
+.cifra span { font-size: .78rem; color: var(--suave); line-height: 1.3; }
+.barra { height: 8px; background: var(--capa); border-radius: 99px; overflow: hidden; }
+.barra span { display: block; height: 100%; background: var(--acento); border-radius: 99px; }
+
+/* Listas */
+.lista, .lista-enlaces { background: var(--tarjeta); border: 1px solid var(--borde); border-radius: var(--radio); overflow: hidden; }
+.fila, .lista-enlaces a {
+  display: flex; align-items: center; gap: 12px; padding: 14px 16px; text-decoration: none;
+  border: 0; border-bottom: 1px solid var(--borde); width: 100%; background: none; text-align: left; cursor: pointer;
+}
+.lista > :last-child, .lista-enlaces > :last-child { border-bottom: 0; }
+.fila > span:not(.fila__marca):not(.fila__flecha):not(.codigo) { flex: 1; min-width: 0; }
+.fila b { display: block; font-weight: 600; }
+.fila small { display: block; color: var(--suave); font-size: .85rem; line-height: 1.35; }
+.fila__flecha, .lista-enlaces span { color: var(--suave); font-size: 1.3rem; margin-left: auto; }
+.lista-enlaces a { justify-content: space-between; font-weight: 600; }
+.fila__marca { flex: none; width: 22px; height: 22px; border-radius: 50%; border: 2px solid var(--borde); }
+.fila__marca.hecha { background: var(--verde); border-color: var(--verde); box-shadow: inset 0 0 0 3px var(--tarjeta); }
+
+/* Lección */
+.volver { color: var(--suave); text-decoration: none; font-weight: 600; font-size: .9rem; }
+.piezas { margin: 0; display: grid; gap: 2px; }
+.piezas dt { font-weight: 700; margin-top: 10px; }
+.piezas dt:first-child { margin-top: 0; }
+.piezas dd { margin: 0; color: var(--suave); }
+.pasos { margin: 0; padding-left: 22px; display: grid; gap: 8px; }
+.alarmas { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.alarmas li { display: flex; gap: 10px; align-items: flex-start; }
+.chip { flex: none; font-size: .7rem; font-weight: 700; text-transform: uppercase; letter-spacing: .04em; padding: 3px 8px; border-radius: 99px; line-height: 1.4; }
+.chip--grave { background: var(--grave-fondo); color: var(--grave-texto); }
+.chip--atencion { background: var(--atencion-fondo); color: var(--atencion-texto); }
+.chip--leve { background: var(--leve-fondo); color: var(--leve-texto); }
+
+/* Botones y formularios */
+.botones { display: flex; flex-wrap: wrap; gap: 10px; }
+.boton {
+  display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 0 20px;
+  border-radius: 99px; border: 0; background: var(--acento); color: var(--sobre-acento); font-weight: 700; text-decoration: none; cursor: pointer;
+}
+.boton:hover { background: var(--acento-oscuro); }
+.boton--sec { background: var(--tarjeta); color: var(--texto); border: 1px solid var(--borde); }
+.boton--sec:hover { background: var(--capa); }
+.boton--peligro { background: transparent; color: var(--rojo); border: 1px solid var(--rojo); }
+.boton--peligro:hover { background: var(--grave-fondo); }
+.campo {
+  width: 100%; font: inherit; color: var(--texto); background: var(--tarjeta);
+  border: 1px solid var(--borde); border-radius: 14px; padding: 12px 14px; min-height: 48px;
+}
+.campo:focus { outline: 2px solid var(--acento); outline-offset: 0; border-color: transparent; }
+textarea.campo { resize: vertical; }
+.campo--codigo { font-family: "Chakra Petch", sans-serif; font-size: 1.5rem; letter-spacing: .1em; text-transform: uppercase; margin: 10px 0; }
+.formulario { display: grid; gap: 14px; }
+.formulario label { display: grid; gap: 6px; font-weight: 600; font-size: .9rem; }
+.formulario .dos { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+fieldset { border: 1px solid var(--borde); border-radius: var(--radio); padding: 12px 16px; margin: 0; display: grid; gap: 4px; background: var(--tarjeta); }
+legend { font-weight: 700; padding: 0 6px; }
+.formulario .radio { display: flex; align-items: center; gap: 10px; font-weight: 500; min-height: 40px; }
+.radio input { width: 20px; height: 20px; accent-color: var(--acento); }
+
+.filtros, .pestanas { display: flex; gap: 8px; overflow-x: auto; scrollbar-width: none; padding-bottom: 2px; }
+.filtros::-webkit-scrollbar { display: none; }
+.filtros button, .filtros a, .pestanas a {
+  flex: none; border: 1px solid var(--borde); background: var(--tarjeta); border-radius: 99px;
+  padding: 8px 14px; font-size: .9rem; font-weight: 600; cursor: pointer; text-decoration: none;
+}
+.filtros .activo, .pestanas .activa { background: var(--invertido); color: var(--sobre-invertido); border-color: var(--invertido); }
+.pestanas a { flex: 1; text-align: center; }
+
+/* Diagnóstico */
+.lista-sintomas { display: grid; gap: 10px; }
+.sintoma summary { display: flex; gap: 10px; align-items: center; cursor: pointer; list-style: none; }
+.sintoma summary::-webkit-details-marker { display: none; }
+.sintoma summary::after { content: "+"; margin-left: auto; font-size: 1.3rem; color: var(--suave); }
+.sintoma[open] summary::after { content: "−"; }
+.sintoma ul { margin: 0; padding-left: 20px; }
+.codigo { font-family: "Chakra Petch", sans-serif; font-weight: 700; background: var(--capa); border-radius: 8px; padding: 2px 8px; flex: none; }
+.codigo-linea { display: flex; gap: 8px; align-items: baseline; font-size: .9rem; }
+.anatomia { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; margin-bottom: 12px; }
+.anatomia span { display: grid; gap: 2px; text-align: center; font-size: .72rem; color: var(--suave); line-height: 1.25; }
+.anatomia b { font-family: "Chakra Petch", sans-serif; font-size: 1.6rem; color: var(--texto); background: var(--capa); border-radius: 12px; padding: 6px 0; }
+
+/* Práctica */
+.opciones { display: grid; gap: 10px; margin-top: 12px; }
+.opcion {
+  text-align: left; padding: 14px 16px; border-radius: 16px; border: 1px solid var(--borde);
+  background: var(--fondo); cursor: pointer; min-height: 48px; font-weight: 500;
+}
+.opcion:hover:not(:disabled) { border-color: var(--texto); }
+.opcion:disabled { cursor: default; }
+.opcion.correcta { background: var(--leve-fondo); border-color: var(--verde); color: var(--leve-texto); }
+.opcion.mala { background: var(--grave-fondo); border-color: var(--rojo); color: var(--grave-texto); }
+#explica { display: grid; gap: 10px; margin-top: 12px; }
+#explica:empty { display: none; }
+.resultado { font-weight: 700; }
+.resultado--ok { color: var(--verde); }
+.resultado--mal { color: var(--rojo); }
+
+/* Navegación inferior */
+.nav {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 10;
+  display: grid; grid-template-columns: repeat(5, 1fr);
+  background: var(--capa); border-top: 1px solid var(--borde);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+.nav a {
+  height: var(--nav); display: grid; place-items: center; align-content: center; gap: 2px;
+  font-size: .68rem; font-weight: 600; text-decoration: none; color: var(--suave);
+}
+.nav svg { width: 24px; height: 24px; fill: currentColor; }
+.nav a.activo { color: var(--acento); }
+
+.aviso {
+  position: fixed; left: 50%; transform: translateX(-50%); z-index: 20;
+  bottom: calc(var(--nav) + env(safe-area-inset-bottom, 0px) + 14px);
+  background: var(--invertido); color: var(--sobre-invertido); padding: 10px 18px; border-radius: 99px; font-weight: 600; font-size: .9rem;
+  max-width: calc(100% - 32px); text-align: center;
+}
+
+@media (max-width: 380px) {
+  .cifras { grid-template-columns: 1fr; }
+  .marca { display: none; }
+}
+
+/* Confirmación dentro de la página (sin ventanas emergentes) */
+.confirmar { display: grid; gap: 10px; padding: 14px; border: 1px solid var(--rojo); border-radius: 16px; background: var(--grave-fondo); color: var(--grave-texto); font-weight: 600; }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; scroll-behavior: auto !important; } }
+.cabecera { top: env(safe-area-inset-top, 0px); padding-top: 12px; }
+</style>
+<script>window.MODO_PAGINA = true;</script>
+</head>
+<body>
+  <header class="cabecera">
+    <h1 id="titulo">Inicio</h1>
+    <span class="marca">Josefine <b>Mecánica</b></span>
+  </header>
+
+  <main id="vista" class="vista"></main>
+
+  <nav class="nav" aria-label="Secciones">
+    <a href="#inicio"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 2 11h3v9h5v-6h4v6h5v-9h3z"/></svg>Inicio</a>
+    <a href="#aprender"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 1 9l11 6 9-4.9V17h2V9zM5 13.2v4L12 21l7-3.8v-4L12 17z"/></svg>Aprender</a>
+    <a href="#diagnostico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22.7 19.3 13.6 10.2c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3l4.3 4.3-3 3L1.6 5C.4 7.4.9 10.4 2.9 12.4c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.5-.4.5-1.1.1-1.4z"/></svg>Diagnóstico</a>
+    <a href="#practicar"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zm-8.6 14L6 12.6l1.4-1.4 3 3 6.2-6.2L18 9.4z"/></svg>Practicar</a>
+    <a href="#bitacora"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h11a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm2 4v2h8V6zm0 4v2h8v-2zm0 4v2h5v-2z"/></svg>Bitácora</a>
+  </nav>
+
+  <p id="aviso" class="aviso" role="status" hidden></p>
+
+  <script>
+/* Josefine Mecánica: todo el contenido de estudio. Para añadir o corregir algo, solo se edita este archivo.
+   Cifras: cada número técnico lleva su fuente en FUENTES (al final). Nada de precios: el costo real lo da
+   el presupuesto escrito del taller, que se mete en la calculadora de Josefine Auto. */
+
+var LECCIONES = [
+  {
+    id: "kit",
+    titulo: "Tu kit de inspección",
+    sistema: "Antes de empezar",
+    resumen: "Lo que llevas cuando vas a ver un carro y para qué sirve cada cosa.",
+    funciona: [
+      "Revisar un carro es comparar lo que te dicen con lo que ves, oyes, hueles y mide el escáner. Con pocas herramientas descubres casi todo lo que un vendedor puede esconder.",
+      "Ve siempre de día, con tiempo y pide que el motor esté frío. Un carro calentado antes de que llegues puede esconder ruidos de arranque y humo."
+    ],
+    partes: [
+      ["Escáner OBD2", "Lee los códigos de error y los monitores de la computadora del carro. Es lo más importante del kit."],
+      ["Linterna", "Para mirar bajos, fugas, el interior del motor y debajo de las alfombras."],
+      ["Imán envuelto en un trapo", "No se pega donde hay mucha masilla: delata golpes reparados. El trapo evita rayar."],
+      ["Medidor de pintura (si lo tienes)", "Mide el grosor de la pintura panel por panel. Lo que importa es comparar: un panel mucho más grueso que los demás fue repintado."],
+      ["Papel toalla blanco", "Para ver el color real del aceite, del líquido de transmisión y del refrigerante."],
+      ["Guantes y ropa que se pueda manchar", "Vas a tocar aceite y a mirar debajo del carro."],
+      ["Multímetro", "Mide el voltaje de la batería y si el alternador carga."],
+      ["Medidor de profundidad de llanta o una moneda", "Para saber cuánto dibujo le queda a cada llanta."],
+      ["Celular", "Fotos de todo: VIN, placas, defectos, tablero encendido. Te sirven para negociar y para aprender después."]
+    ],
+    revisar: [
+      "Antes de ir: pide el VIN y fotos del tablero con el motor encendido.",
+      "Al llegar: toca el capó. Si está caliente, pregunta por qué y pide volver otro día o esperar a que enfríe.",
+      "Sigue siempre el mismo orden: papeles, carrocería, interior, motor en frío, escáner, prueba de manejo, bajos después de la prueba.",
+      "Apunta todo en la Bitácora de esta app y compáralo después con lo que diga el taller."
+    ],
+    alarmas: [
+      { nivel: "grave", texto: "El vendedor no te deja escanear el carro o no quiere que lo veas en frío." },
+      { nivel: "atencion", texto: "Te cita de noche o bajo la lluvia: así no se ve bien la pintura ni las fugas." }
+    ],
+    dato: "Un orden fijo vale más que la experiencia: así nunca se te olvida un paso, aunque el vendedor te hable todo el rato.",
+    preguntas: [
+      { p: "¿Para qué sirve el imán envuelto en un trapo?", o: ["Para medir la batería", "Para encontrar masilla de golpes reparados", "Para revisar el aceite"], c: 1, e: "La masilla no es metálica: donde hay mucha, el imán no se pega o se pega débil." },
+      { p: "Llegas y el capó está caliente. ¿Qué haces?", o: ["Nada, es normal", "Pregunto por qué y pido verlo en frío", "Lo arranco enseguida"], c: 1, e: "El arranque en frío es cuando salen ruidos y humo. Un motor calentado puede esconderlos." }
+    ]
+  },
+  {
+    id: "motor",
+    titulo: "El motor",
+    sistema: "Motor",
+    resumen: "Cómo convierte gasolina en movimiento y cómo se nota un motor cansado.",
+    funciona: [
+      "Casi todos los motores de gasolina trabajan en cuatro tiempos. Admisión: el pistón baja y entra aire con combustible. Compresión: el pistón sube y aprieta la mezcla. Explosión: la bujía la enciende y empuja el pistón hacia abajo. Escape: el pistón sube y saca los gases por el escape.",
+      "Los pistones mueven el cigüeñal, que gira y manda la fuerza a la transmisión. El árbol de levas abre y cierra las válvulas en el momento justo; va sincronizado con el cigüeñal por una correa o una cadena de distribución.",
+      "Entre el bloque (abajo) y la culata (arriba) hay una junta, la junta de culata. Si falla, el aceite y el refrigerante se mezclan o el refrigerante se quema: es una de las averías más caras."
+    ],
+    partes: [
+      ["Bloque", "La pieza grande donde se mueven los pistones."],
+      ["Culata", "La tapa de arriba, con las válvulas y el árbol de levas."],
+      ["Junta de culata", "Sella entre bloque y culata. Si se quema, se mezclan líquidos."],
+      ["Pistones y bielas", "Suben y bajan; las bielas los unen al cigüeñal."],
+      ["Cigüeñal", "Convierte el sube y baja en giro."],
+      ["Correa o cadena de distribución", "Sincroniza válvulas y pistones. Si una correa se rompe, en muchos motores las válvulas chocan con los pistones."],
+      ["Bujías y bobinas", "Hacen la chispa. Si una falla, el motor tiembla (falla de encendido)."],
+      ["Soportes del motor", "Gomas que lo sujetan al chasis. Gastados, el motor vibra y da golpes al arrancar o cambiar."]
+    ],
+    revisar: [
+      "Con el motor frío, pide que lo arranquen mientras miras el escape y escuchas el motor con el capó abierto.",
+      "Escucha los primeros segundos: un tic-tac rápido que desaparece puede ser normal; un golpeteo profundo que sigue con el motor caliente no lo es.",
+      "Mira el escape: un poco de vapor blanco que se va en un minuto es condensación normal. Humo azul, negro o blanco espeso que no se va, no.",
+      "En ralentí, el motor debe estar estable. Si tiembla o las revoluciones suben y bajan solas, anota y busca códigos de falla de encendido con el escáner.",
+      "Pide a alguien que acelere un poco con el capó abierto: si el motor salta mucho, los soportes pueden estar rotos.",
+      "Busca fugas de aceite alrededor de la tapa de válvulas, el cárter y donde se une el motor con la transmisión.",
+      "Pregunta cuándo se cambió la correa de distribución, si la tiene. El intervalo lo marca el manual de mantenimiento del fabricante; pide la factura."
+    ],
+    alarmas: [
+      { nivel: "grave", texto: "Golpeteo metálico profundo que aumenta con las revoluciones: puede ser biela o cojinetes." },
+      { nivel: "grave", texto: "Humo blanco espeso y dulce que no se va con el motor caliente: refrigerante quemándose (posible junta de culata)." },
+      { nivel: "grave", texto: "Humo azul constante: el motor quema aceite (anillos o sellos de válvulas)." },
+      { nivel: "atencion", texto: "Humo negro: mezcla demasiado rica (inyectores, sensores, filtro de aire)." },
+      { nivel: "atencion", texto: "Correa de distribución sin factura y con muchos km: inclúyela en el presupuesto del taller." }
+    ],
+    dato: "El motor es la pieza más cara de reparar. Si dudas del motor, prueba de compresión en el taller antes de pagar.",
+    preguntas: [
+      { p: "¿Qué une el árbol de levas con el cigüeñal?", o: ["La junta de culata", "La correa o cadena de distribución", "El alternador"], c: 1, e: "La distribución mantiene válvulas y pistones sincronizados." },
+      { p: "Humo azul constante por el escape significa normalmente…", o: ["Que quema aceite", "Que es condensación", "Que la batería está baja"], c: 0, e: "El aceite quemado da humo azulado. Suele ser anillos o sellos de válvulas gastados." },
+      { p: "¿Cuál es el orden de los cuatro tiempos?", o: ["Compresión, admisión, escape, explosión", "Admisión, compresión, explosión, escape", "Explosión, admisión, compresión, escape"], c: 1, e: "Entra la mezcla, se comprime, explota y sale." },
+      { p: "Vapor blanco fino al arrancar en frío que desaparece en un minuto es…", o: ["Junta de culata seguro", "Normalmente condensación", "Aceite quemado"], c: 1, e: "Es agua del escape. Lo preocupante es el humo blanco espeso que sigue con el motor caliente." }
+    ]
+  },
+  {
+    id: "aceite",
+    titulo: "Aceite y lubricación",
+    sistema: "Motor",
+    resumen: "Leer la varilla te cuenta la vida del motor en 30 segundos.",
+    funciona: [
+      "El aceite evita que las piezas metálicas del motor se toquen. Una bomba lo empuja por todo el motor y un filtro lo limpia. Con el uso se ensucia y pierde propiedades: por eso se cambia según el manual.",
+      "La varilla mide el nivel. Algunos carros modernos no tienen varilla y el nivel se ve en la pantalla del tablero."
+    ],
+    partes: [
+      ["Varilla", "Muestra el nivel entre las marcas mínimo y máximo."],
+      ["Tapón de llenado", "Arriba del motor. Por dentro te dice mucho del estado."],
+      ["Filtro de aceite", "Se cambia con el aceite."],
+      ["Cárter", "El depósito de abajo del motor."],
+      ["Testigo de presión de aceite", "La lámpara roja con forma de aceitera."]
+    ],
+    revisar: [
+      "Con el carro en plano y el motor frío, saca la varilla, límpiala, métela de nuevo y vuelve a sacarla.",
+      "El nivel debe estar entre las dos marcas. Muy bajo: puede consumir o perder aceite.",
+      "Pon una gota en papel blanco: marrón o negro es normal según el uso; lo importante es que no esté lechoso ni con brillos metálicos.",
+      "Huele la varilla: olor fuerte a gasolina puede indicar problemas de mezcla o de inyectores.",
+      "Abre el tapón de llenado y mira por dentro: una pasta color café con leche es mala señal; lodo negro espeso indica cambios de aceite olvidados.",
+      "Pide las facturas de cambios de aceite: lo normal es que cuadren con los km."
+    ],
+    alarmas: [
+      { nivel: "grave", texto: "Aceite lechoso o color café con leche en la varilla: agua o refrigerante en el aceite (posible junta de culata)." },
+      { nivel: "grave", texto: "Brillos metálicos en el aceite: piezas del motor se están desgastando." },
+      { nivel: "grave", texto: "Testigo de presión de aceite encendido con el motor en marcha." },
+      { nivel: "atencion", texto: "Lodo negro bajo el tapón: mantenimiento descuidado." },
+      { nivel: "atencion", texto: "Aceite recién cambiado y muy limpio en un carro sin facturas: pueden estar escondiendo el estado real." }
+    ],
+    dato: "Un poco de pasta clara bajo el tapón puede aparecer por condensación en carros que hacen trayectos muy cortos. Por eso se cruza con el refrigerante y con el humo antes de decidir.",
+    preguntas: [
+      { p: "Sacas la varilla y el aceite parece café con leche. ¿Qué piensas?", o: ["Aceite nuevo", "Posible mezcla con refrigerante", "Normal en Panamá"], c: 1, e: "El aspecto lechoso es agua o refrigerante mezclado. Se descarta o se manda a taller." },
+      { p: "¿Cómo se mide bien el nivel?", o: ["Con el motor encendido", "En plano, motor frío, limpiando la varilla y volviendo a meterla", "Mirando el tapón"], c: 1, e: "La primera lectura puede estar sucia; la segunda es la buena." }
+    ]
+  },
+  {
+    id: "refrigeracion",
+    titulo: "Refrigeración",
+    sistema: "Motor",
+    resumen: "Lo que mantiene el motor a temperatura. En el calor de Panamá, clave.",
+    funciona: [
+      "El refrigerante circula por el motor y se lleva el calor al radiador, donde el aire lo enfría. La bomba de agua lo mueve, el termostato decide cuándo pasa al radiador y el ventilador ayuda cuando el carro va lento.",
+      "Si el motor se recalienta, la culata se puede deformar y la junta de culata se quema. Un carro que se ha recalentado mucho puede tener daños que no se ven."
+    ],
+    partes: [
+      ["Radiador", "Enfría el refrigerante con el aire."],
+      ["Depósito de expansión", "El envase plástico con marcas mínimo y máximo."],
+      ["Bomba de agua", "Hace circular el refrigerante."],
+      ["Termostato", "Válvula que abre el paso al radiador cuando el motor está caliente."],
+      ["Ventilador", "Sopla aire por el radiador en el tráfico."],
+      ["Mangueras", "Llevan el refrigerante. Con los años se agrietan."]
+    ],
+    revisar: [
+      "Nunca abras la tapa del radiador con el motor caliente: el líquido sale hirviendo.",
+      "En frío, mira el depósito: nivel entre mínimo y máximo, color limpio, sin aceite flotando.",
+      "Busca manchas secas blancas, verdes o rosadas alrededor de mangueras, radiador y bomba de agua: son fugas antiguas.",
+      "Aprieta las mangueras en frío: deben estar firmes, ni duras como piedra ni blandas.",
+      "En la prueba de manejo, déjalo en ralentí en el tráfico con el aire acondicionado puesto: la aguja de temperatura no debe subir. El ventilador debe encender.",
+      "Si el escáner lo permite, mira la temperatura del refrigerante en datos en vivo."
+    ],
+    alarmas: [
+      { nivel: "grave", texto: "Aceite o una capa marrón en el refrigerante: posible junta de culata." },
+      { nivel: "grave", texto: "Burbujas constantes en el depósito con el motor en marcha: gases del motor entrando al refrigerante." },
+      { nivel: "grave", texto: "La temperatura sube en el tráfico o en la prueba." },
+      { nivel: "atencion", texto: "Olor dulce dentro del carro o vaho en los vidrios: posible fuga en el radiador de la calefacción." },
+      { nivel: "atencion", texto: "Refrigerante oxidado o solo agua en el depósito: mantenimiento descuidado." }
+    ],
+    dato: "Pregunta siempre: ¿se ha recalentado alguna vez? Y compara la respuesta con lo que ves.",
+    preguntas: [
+      { p: "¿Qué pieza decide cuándo pasa el refrigerante al radiador?", o: ["La bomba de agua", "El termostato", "El ventilador"], c: 1, e: "El termostato abre cuando el motor llega a su temperatura de trabajo." },
+      { p: "¿Cuándo se puede abrir la tapa del radiador?", o: ["Siempre", "Solo con el motor frío", "Con el motor encendido"], c: 1, e: "En caliente el sistema tiene presión y el líquido sale hirviendo." },
+      { p: "Ves burbujas constantes en el depósito con el motor en marcha. ¿Qué puede ser?", o: ["Gases del motor en el refrigerante", "Normal", "Falta de aceite"], c: 0, e: "Es una señal típica de junta de culata dañada." }
+    ]
+  },
+  {
+    id: "transmision",
+    titulo: "Transmisión y embrague",
+    sistema: "Transmisión",
+    resumen: "Manual, automática y CVT: cómo probarlas y qué te dice cada golpe.",
+    funciona: [
+      "La transmisión cambia la relación entre las revoluciones del motor y las ruedas. Sin ella, el carro no podría arrancar con fuerza ni ir rápido.",
+      "Manual: el embrague (el pedal de la izquierda) separa el motor de la caja para cambiar de marcha. El disco de embrague se gasta con el uso.",
+      "Automática: cambia sola usando presión de aceite (ATF) y una computadora. Un convertidor de par hace el trabajo del embrague.",
+      "CVT: no tiene marchas fijas; usa una correa o cadena entre dos poleas que cambian de tamaño. Se siente como una aceleración continua, sin saltos. Es sensible a que se le cambie el aceite a tiempo y a que no la maltraten.",
+      "El diferencial reparte la fuerza entre las ruedas de un mismo eje y les deja girar a distinta velocidad en las curvas."
+    ],
+    partes: [
+      ["Embrague", "Disco, plato y collarín. Se gasta con el uso."],
+      ["Caja de cambios", "Los engranajes."],
+      ["ATF / aceite de transmisión", "Lubrica y, en las automáticas, también acciona los cambios."],
+      ["Convertidor de par", "En las automáticas, une motor y caja."],
+      ["Diferencial", "Reparte la fuerza a las ruedas."],
+      ["Juntas homocinéticas (palieres)", "Llevan la fuerza a las ruedas que giran y se mueven. Van cubiertas por guardapolvos de goma."]
+    ],
+    revisar: [
+      "Automática: con el pie en el freno, pasa de P a R y a D. Debe entrar en un segundo, con un toque suave, no un golpe fuerte.",
+      "En la prueba, acelera suave y luego fuerte: los cambios deben ser limpios, sin patinar (que suban las revoluciones sin que el carro acelere) ni dar tirones.",
+      "Si la caja tiene varilla, mira el ATF en papel blanco: rojizo o marrón claro; huele: no debe oler a quemado.",
+      "Manual: el pedal debe agarrar a una altura normal. Para ver si patina, en una marcha alta y a pocas revoluciones acelera a fondo un momento: si suben las revoluciones y el carro no acelera, el embrague patina.",
+      "Manual: escucha ruidos al pisar y soltar el embrague, y si las marchas entran duras o rascan.",
+      "CVT: un zumbido o silbido que sube con la velocidad, tirones al arrancar o sensación de que patina son malas señales.",
+      "Gira el volante a tope y avanza despacio en círculo: un clic-clic repetido suele ser una junta homocinética gastada. Mira que los guardapolvos no estén rotos ni con grasa fuera.",
+      "Escanea códigos de transmisión (los que empiezan por P07) y, si el escáner lo muestra, la temperatura de la transmisión."
+    ],
+    alarmas: [
+      { nivel: "grave", texto: "La transmisión o el embrague patinan." },
+      { nivel: "grave", texto: "Golpe fuerte al poner D o R, o tarda varios segundos en engranar." },
+      { nivel: "grave", texto: "ATF negro y con olor a quemado." },
+      { nivel: "atencion", texto: "Zumbido en una CVT o cambios bruscos de vez en cuando." },
+      { nivel: "atencion", texto: "Clic-clic al girar a tope: junta homocinética." }
+    ],
+    dato: "Una transmisión automática o CVT dañada puede costar una parte grande del valor del carro. Si hay dudas, al taller antes de pagar.",
+    preguntas: [
+      { p: "En una manual, aceleras a fondo en marcha alta y suben las revoluciones pero el carro no acelera. ¿Qué pasa?", o: ["El embrague patina", "Normal", "Le falta aceite al motor"], c: 0, e: "El disco ya no transmite toda la fuerza: hay que cambiar el embrague." },
+      { p: "Un clic-clic al girar a tope y avanzar despacio suele ser…", o: ["La batería", "Una junta homocinética", "El alternador"], c: 1, e: "Las juntas homocinéticas gastadas hacen ese ruido en curvas cerradas." },
+      { p: "¿Qué es una CVT?", o: ["Una caja manual de 6 marchas", "Una caja sin marchas fijas, con correa y poleas", "Un tipo de freno"], c: 1, e: "Variación continua: no hay saltos entre marchas." }
+    ]
+  },
+  {
+    id: "frenos",
+    titulo: "Frenos",
+    sistema: "Seguridad",
+    resumen: "Ruidos, vibraciones y pedal: qué te dice cada uno.",
+    funciona: [
+      "Al pisar el pedal, el líquido de frenos empuja unos pistones (en las pinzas) que aprietan las pastillas contra los discos. En algunos carros, atrás hay tambores en lugar de discos.",
+      "El ABS evita que las ruedas se bloqueen en una frenada fuerte: notarás vibraciones en el pedal cuando actúa, y eso es normal.",
+      "El líquido de frenos absorbe humedad con el tiempo y se oscurece; por eso se cambia según el manual."
+    ],
+    partes: [
+      ["Discos", "Giran con la rueda. Con el uso se gastan y forman un escalón en el borde."],
+      ["Pastillas", "Aprietan el disco. Muchas traen un aviso metálico que chilla cuando se acaban."],
+      ["Pinzas (cálipers)", "Sujetan las pastillas y las empujan."],
+      ["Líquido de frenos", "Transmite la fuerza del pedal."],
+      ["ABS", "Evita el bloqueo de las ruedas."]
+    ],
+    revisar: [
+      "Mira los discos entre los rayos del rin: un escalón marcado en el borde o surcos profundos indican desgaste.",
+      "Mira el depósito de líquido: nivel bien y color claro; muy oscuro indica que no se ha cambiado.",
+      "Con el motor encendido, el pedal debe quedar firme y alto; no debe hundirse poco a poco si lo mantienes pisado.",
+      "En la prueba: frena suave y fuerte en una recta segura. Debe frenar recto, sin vibrar el volante ni el pedal (fuera de cuando actúa el ABS) y sin ruidos.",
+      "Después de la prueba, acerca la mano a los rines sin tocar: si uno está mucho más caliente que los demás, ese freno puede estar pegado."
+    ],
+    alarmas: [
+      { nivel: "grave", texto: "Pedal esponjoso o que se hunde: aire o fuga en el sistema." },
+      { nivel: "grave", texto: "Ruido de metal con metal al frenar: pastillas acabadas, el disco se está dañando." },
+      { nivel: "grave", texto: "Testigo rojo de frenos encendido." },
+      { nivel: "atencion", texto: "Vibración en el volante al frenar: discos deformados." },
+      { nivel: "atencion", texto: "El carro se va hacia un lado al frenar: pinza pegada o desgaste desigual." }
+    ],
+    dato: "Pastillas y discos son mantenimiento normal: no descartan un carro, pero se descuentan del precio con el presupuesto del taller.",
+    preguntas: [
+      { p: "Al frenar vibra el volante. Lo más probable es…", o: ["Discos deformados", "Batería baja", "Embrague gastado"], c: 0, e: "Los discos deformados hacen que la pastilla apriete de forma irregular." },
+      { p: "El pedal de freno se hunde poco a poco si lo mantienes pisado. ¿Qué indica?", o: ["Normal", "Fuga o problema en el sistema hidráulico", "Que tiene ABS"], c: 1, e: "Es un problema de seguridad: se revisa antes de comprar." },
+      { p: "En una frenada fuerte notas pulsos en el pedal y un ruido. ¿Puede ser normal?", o: ["Sí, es el ABS actuando", "No, siempre es avería"], c: 0, e: "El ABS suelta y aprieta muy rápido para que las ruedas no se bloqueen." }
+    ]
+  },
+  {
+    id: "suspension",
+    titulo: "Suspensión y dirección",
+    sistema: "Seguridad",
+    resumen: "Lo que mantiene las llantas pegadas al suelo y el volante preciso.",
+    funciona: [
+      "Los resortes (espirales) aguantan el peso y los amortiguadores frenan el rebote. Los brazos, rótulas y bujes unen las ruedas al carro y les dejan moverse.",
+      "La dirección lleva el giro del volante a las ruedas. Puede tener asistencia hidráulica (con una bomba y líquido) o eléctrica.",
+      "La alineación es el ángulo de las ruedas. Si está mal o hay piezas gastadas, las llantas se gastan raro y el carro tira hacia un lado."
+    ],
+    partes: [
+      ["Amortiguadores", "Controlan el rebote. Si fugan aceite, están dañados."],
+      ["Espirales (resortes)", "Aguantan el peso."],
+      ["Rótulas", "Articulaciones de la rueda. Gastadas, hacen ruido y dan holgura."],
+      ["Terminales de dirección", "Unen la cremallera con las ruedas."],
+      ["Bujes", "Gomas en las uniones de los brazos."],
+      ["Barra estabilizadora y sus links", "Reducen la inclinación en curvas. Los links gastados suenan en baches."],
+      ["Cremallera de dirección", "Convierte el giro del volante en movimiento lateral."]
+    ],
+    revisar: [
+      "Prueba de rebote: empuja con fuerza cada esquina hacia abajo y suelta. Debe subir y quedarse; si rebota varias veces, el amortiguador está gastado.",
+      "Con la linterna, mira los amortiguadores: no deben estar mojados de aceite.",
+      "Mira que el carro esté nivelado: una esquina más baja puede ser un espiral roto.",
+      "En la prueba: pasa por baches y muertos despacio. Golpes secos o crujidos indican piezas gastadas.",
+      "En una recta y en plano, suelta un momento el volante (con seguridad): el carro no debe irse hacia un lado y el volante debe estar centrado.",
+      "Con el carro parado y el motor encendido, gira el volante de tope a tope: no debe chillar ni crujir. Si es hidráulica, mira el nivel del líquido.",
+      "Mira el desgaste de las llantas (lección de llantas): cuenta mucho de la suspensión."
+    ],
+    alarmas: [
+      { nivel: "grave", texto: "Holgura en la dirección: giras un poco el volante y las ruedas no responden." },
+      { nivel: "grave", texto: "Piezas de suspensión dobladas o soldadas: posible choque fuerte." },
+      { nivel: "atencion", texto: "Amortiguador con fuga de aceite o que rebota." },
+      { nivel: "atencion", texto: "Golpes o crujidos en baches." },
+      { nivel: "atencion", texto: "Tira hacia un lado o volante torcido en recta." }
+    ],
+    dato: "Un volante torcido en un carro con poco uso, junto con piezas de suspensión nuevas en un solo lado, puede delatar un choque. Cruza con la carrocería.",
+    preguntas: [
+      { p: "Empujas una esquina y el carro rebota tres veces. ¿Qué piensas?", o: ["Amortiguador gastado", "Llanta baja", "Normal"], c: 0, e: "Un amortiguador sano para el rebote en una sola subida." },
+      { p: "El carro tira hacia la derecha en una recta plana. Puede ser…", o: ["Alineación o piezas de suspensión", "El aire acondicionado", "La batería"], c: 0, e: "También puede ser presión desigual de llantas o un freno pegado." }
+    ]
+  },
+  {
+    id: "llantas",
+    titulo: "Llantas y rines",
+    sistema: "Seguridad",
+    resumen: "La edad, el dibujo y el tipo de desgaste: tres datos que se leen en un minuto.",
+    funciona: [
+      "La llanta es lo único que toca el suelo. Su dibujo saca el agua para que no patine (aquaplaning) y la goma se endurece con los años aunque tenga dibujo.",
+      "En el costado viene el código DOT. Sus cuatro últimos números dicen la semana y el año de fabricación: 2419 es la semana 24 de 2019.",
+      "Las llantas traen testigos de desgaste en el fondo de las ranuras: cuando el dibujo llega a ellos, la llanta está acabada."
+    ],
+    partes: [
+      ["Banda de rodadura", "La parte con dibujo que toca el suelo."],
+      ["Costado", "Lateral con la medida y el código DOT. No debe tener cortes ni bultos."],
+      ["Testigos de desgaste", "Barritas en las ranuras que marcan el mínimo."],
+      ["Rin", "La parte metálica. Golpes o grietas causan pérdidas de aire y vibraciones."]
+    ],
+    revisar: [
+      "Lee el DOT de las cuatro llantas y la de repuesto: anota la semana y el año.",
+      "Mide el dibujo en el centro y en los dos bordes de cada llanta.",
+      "Lee el tipo de desgaste: gastada en los dos bordes = poca presión; gastada en el centro = demasiada presión; gastada en un solo borde = alineación o suspensión; gastada en parches (ondas) = amortiguadores o balanceo.",
+      "Mira que las cuatro sean de la misma marca y medida, o al menos iguales por eje.",
+      "Busca bultos o cortes en los costados y golpes en los rines.",
+      "Comprueba que hay llanta de repuesto, gata y llave de tuercas."
+    ],
+    alarmas: [
+      { nivel: "grave", texto: "Bulto en el costado: la llanta puede reventar. No se maneja con ella." },
+      { nivel: "atencion", texto: "Dibujo al nivel de los testigos de desgaste." },
+      { nivel: "atencion", texto: "Llantas viejas según el DOT aunque tengan dibujo." },
+      { nivel: "atencion", texto: "Desgaste en un solo borde: busca el problema de suspensión o alineación." }
+    ],
+    dato: "Llantas nuevas no son motivo para descartar, pero sí para descontar. Y el tipo de desgaste te cuenta cosas de la suspensión que el vendedor no dice.",
+    preguntas: [
+      { p: "El DOT termina en 0821. ¿Cuándo se fabricó la llanta?", o: ["Agosto de 2021", "Semana 8 de 2021", "Día 8 de 2021"], c: 1, e: "Dos números de semana y dos de año." },
+      { p: "Una llanta gastada solo en el borde interior indica…", o: ["Poca presión", "Problema de alineación o suspensión", "Demasiada presión"], c: 1, e: "La poca presión gasta los dos bordes; un solo borde es ángulo de la rueda." },
+      { p: "Una llanta gastada en el centro suele indicar…", o: ["Demasiada presión", "Poca presión", "Frenos malos"], c: 0, e: "Con demasiado aire, la llanta se abomba y apoya solo el centro." }
+    ]
+  },
+  {
+    id: "electrico",
+    titulo: "Batería y sistema eléctrico",
+    sistema: "Eléctrico",
+    resumen: "Batería, alternador y arranque, y cómo medirlos con un multímetro.",
+    funciona: [
+      "La batería da la energía para arrancar. Una vez encendido, el alternador (movido por una correa) produce la electricidad y recarga la batería.",
+      "El motor de arranque gira el motor para encenderlo. Si suena un clic y no arranca, suele ser batería descargada, bornes sucios o el arranque.",
+      "Los carros modernos tienen muchas computadoras conectadas entre sí. Una batería débil puede encender testigos raros y crear fallas que parecen graves."
+    ],
+    partes: [
+      ["Batería", "Guarda energía. Tiene fecha de fabricación en una etiqueta."],
+      ["Bornes", "Los terminales. Si tienen polvo blanco o verde (sulfato), hacen mal contacto."],
+      ["Alternador", "Genera electricidad con el motor en marcha."],
+      ["Motor de arranque", "Gira el motor para encenderlo."],
+      ["Fusibles y relés", "Protegen los circuitos."]
+    ],
+    revisar: [
+      "Mira la batería: bornes limpios, bien sujeta, sin hinchazón ni fugas. Busca la fecha en la etiqueta.",
+      "Con el motor apagado (y el carro en reposo un rato), mide con el multímetro en los bornes. Cargada, una batería en reposo da alrededor de 12,6 V; por debajo de unos 12,2 V está descargada.",
+      "Arranca y mide otra vez: con el motor en marcha debe subir, más o menos entre 13,8 y 14,4 V. Si sigue igual que en reposo, el alternador no carga.",
+      "Prueba todo lo eléctrico: luces, direccionales, vidrios, seguros, retrovisores, pantalla, cámara, bocina, limpiaparabrisas.",
+      "Al dar contacto, todos los testigos deben encenderse un momento y luego apagarse al arrancar."
+    ],
+    alarmas: [
+      { nivel: "grave", texto: "Testigo de batería encendido con el motor en marcha: el carro no está cargando." },
+      { nivel: "grave", texto: "Cables derretidos, empalmes caseros o cinta aislante por todas partes." },
+      { nivel: "atencion", texto: "Voltaje con el motor en marcha igual al de reposo: alternador." },
+      { nivel: "atencion", texto: "Batería hinchada o con bornes muy sulfatados." }
+    ],
+    dato: "Accesorios instalados (alarma, equipo de sonido, luces) con cables mal hechos son una causa típica de fallas eléctricas raras. Mira debajo del tablero.",
+    preguntas: [
+      { p: "Con el motor en marcha mides 12,5 V en la batería. ¿Qué indica?", o: ["El alternador no está cargando", "Todo perfecto", "Batería nueva"], c: 0, e: "Con el motor encendido el voltaje tiene que subir por encima del de reposo." },
+      { p: "Polvo blanco o verde en los bornes es…", o: ["Sulfato: mal contacto", "Normal", "Aceite"], c: 0, e: "Se limpia, pero indica descuido y puede causar arranques difíciles." }
+    ]
+  },
+  {
+    id: "aire",
+    titulo: "Aire acondicionado",
+    sistema: "Confort",
+    resumen: "En Panamá un carro sin aire bien frío se vende peor. Se prueba siempre.",
+    funciona: [
+      "El compresor (movido por la correa del motor) comprime el gas refrigerante. En el condensador, delante del radiador, el gas suelta calor. Luego se expande y en el evaporador, dentro del tablero, enfría el aire que entra a la cabina.",
+      "El agua que gotea debajo del carro con el aire puesto es condensación del evaporador: es normal."
+    ],
+    partes: [
+      ["Compresor", "La bomba del aire acondicionado. Tiene un embrague que hace clic al conectarse."],
+      ["Condensador", "Radiador delante del radiador del motor."],
+      ["Evaporador", "Dentro del tablero; enfría el aire."],
+      ["Ventilador de cabina (blower)", "Sopla el aire por las rejillas."],
+      ["Filtro de cabina", "Filtra el aire que entra. Si está sucio, huele mal y sopla poco."]
+    ],
+    revisar: [
+      "Con el motor encendido, pon el aire al máximo frío: debe salir frío pronto y mantenerse frío.",
+      "Escucha el compresor: un clic al conectar es normal; chirridos o golpeteos no.",
+      "Prueba todas las velocidades del ventilador y todas las salidas.",
+      "Huele: olor a humedad puede ser el evaporador o el filtro sucio; olor a humedad fuerte con otras señales, piensa en inundación.",
+      "En la prueba, mira que la temperatura del motor no suba con el aire puesto en el tráfico."
+    ],
+    alarmas: [
+      { nivel: "atencion", texto: "Aire que enfría poco o deja de enfriar en ralentí." },
+      { nivel: "atencion", texto: "Ruido del compresor o que no se conecta." },
+      { nivel: "atencion", texto: "Ventilador que solo funciona en la velocidad máxima: suele ser la resistencia del blower." }
+    ],
+    dato: "Un aire que enfría poco a veces es solo falta de gas por una fuga pequeña. Pero que te lo diga el taller con presupuesto: puede ser el compresor.",
+    preguntas: [
+      { p: "Gotea agua clara debajo del carro con el aire puesto. ¿Es grave?", o: ["No, es condensación normal", "Sí, es refrigerante del motor"], c: 0, e: "El evaporador saca agua del aire y la tira por un tubo debajo del carro." },
+      { p: "El ventilador de cabina solo funciona en la velocidad máxima. Lo típico es…", o: ["La resistencia del ventilador", "El compresor", "El motor"], c: 0, e: "La velocidad máxima no pasa por la resistencia, por eso es la única que queda." }
+    ]
+  },
+  {
+    id: "carroceria",
+    titulo: "Carrocería y chasis",
+    sistema: "Estructura",
+    resumen: "Cómo descubrir choques reparados aunque la pintura brille.",
+    funciona: [
+      "El chasis es el esqueleto del carro. En la mayoría de carros modernos la carrocería y el chasis son una sola pieza (monocasco), con unos largueros delante y detrás que absorben los golpes.",
+      "Un golpe en un panel (una puerta, un guardafango) se arregla. Un golpe que dobla un larguero o una torre de amortiguador afecta la seguridad y el valor del carro, aunque quede bonito.",
+      "Las piezas atornilladas (capó, puertas, guardafangos) se pueden cambiar; las soldadas (largueros, piso, pilares) no deberían tener marcas de reparación."
+    ],
+    partes: [
+      ["Largueros", "Vigas del chasis delante y detrás. Detrás del parachoques."],
+      ["Torres de amortiguador", "Donde se apoya la suspensión delantera, bajo el capó."],
+      ["Pilares", "Las columnas que sostienen el techo."],
+      ["Piso del maletero", "Debajo de la alfombra del maletero, junto a la llanta de repuesto."],
+      ["Paneles atornillados", "Capó, puertas, guardafangos delanteros, tapa del maletero."]
+    ],
+    revisar: [
+      "Agáchate en cada esquina y mira el carro de lado con luz de día: las ondas y los cambios de tono se ven en el reflejo.",
+      "Compara las separaciones entre paneles: deben ser iguales a los dos lados.",
+      "Mira los tornillos del capó, las bisagras de las puertas y de los guardafangos: pintura saltada o marcas de llave indican que se desmontaron.",
+      "Busca pintura en las gomas, los plásticos o las molduras (overspray): señal de repintado.",
+      "Pasa el imán o el medidor de pintura y compara paneles: el que sea distinto, pregunta por qué.",
+      "Abre el capó y el maletero: mira largueros, torres y el piso del maletero buscando soldaduras, dobleces, sellador distinto o pintura nueva.",
+      "Mira los vidrios: todos deberían tener la misma marca. Uno distinto puede ser por golpe.",
+      "Busca óxido en los bajos, en los bordes de las puertas, debajo de los parachoques y en los pasos de rueda.",
+      "Comprueba que el VIN del chasis, el del parabrisas y el de los papeles coinciden."
+    ],
+    alarmas: [
+      { nivel: "grave", texto: "Soldaduras, dobleces o reparaciones en largueros, torres o piso: choque estructural." },
+      { nivel: "grave", texto: "VIN con señales de manipulación o que no coincide con los papeles." },
+      { nivel: "grave", texto: "Óxido que atraviesa el metal en el piso o el chasis." },
+      { nivel: "atencion", texto: "Paneles repintados: un golpe en un panel se acepta, pero se descuenta y se pregunta." },
+      { nivel: "atencion", texto: "Bolsas de aire (airbags) con el testigo encendido: puede venir de un choque." }
+    ],
+    dato: "Repintado no es lo mismo que chocado. Lo que descarta es la estructura dañada, no un rayón arreglado.",
+    preguntas: [
+      { p: "¿Qué descarta un carro: un guardafango repintado o una soldadura en un larguero?", o: ["El guardafango repintado", "La soldadura en el larguero", "Ninguno"], c: 1, e: "El larguero es estructura; el guardafango es un panel atornillado." },
+      { p: "Ves pintura del color del carro en las gomas de una puerta. Indica…", o: ["Repintado de esa zona", "Pintura original", "Óxido"], c: 0, e: "En fábrica no se pinta con las gomas puestas." },
+      { p: "Los tornillos del capó tienen la pintura saltada. ¿Qué piensas?", o: ["Se desmontó el capó: pregunta por qué", "Es normal de fábrica"], c: 0, e: "Puede ser un golpe frontal reparado." }
+    ]
+  },
+  {
+    id: "inundacion",
+    titulo: "Carros inundados",
+    sistema: "Estructura",
+    resumen: "El gran riesgo en Panamá. Cómo detectarlo aunque lo hayan limpiado.",
+    funciona: [
+      "Un carro que estuvo bajo el agua puede verse perfecto por fuera. El daño está en la electrónica, los conectores, los rodamientos y el óxido que aparece meses después.",
+      "Los carros importados de EE. UU. pueden traer en su historial la marca de inundación (flood) o de pérdida total (salvage). Por eso se consulta el VIN en Carfax o AutoCheck."
+    ],
+    partes: [
+      ["Alfombras y espuma de abajo", "Retienen el agua y el barro."],
+      ["Rieles de los asientos", "Se oxidan y es difícil limpiarlos."],
+      ["Conectores eléctricos", "Bajo los asientos y en el tablero. El verde es corrosión."],
+      ["Cinturones de seguridad", "Sácalos del todo: si hay marcas de agua o barro al final, mala señal."],
+      ["Faros y tablero", "Pueden tener marcas de agua por dentro."]
+    ],
+    revisar: [
+      "Huele el interior y el maletero nada más abrir: humedad o moho, o mucho ambientador para tapar.",
+      "Levanta las alfombras y mira la espuma y el piso: barro, arena, agua o óxido.",
+      "Mira los rieles y tornillos de los asientos y del tablero: óxido en un carro sin años es mala señal.",
+      "Saca el cinturón de seguridad hasta el final y mira el extremo.",
+      "Mira los faros y el cuadro de instrumentos: marcas de agua o vaho por dentro.",
+      "Busca barro seco en lugares raros: dentro del maletero bajo la llanta de repuesto, detrás de los paneles, en el motor.",
+      "Comprueba que todo lo eléctrico funcione y que no haya testigos encendidos.",
+      "Consulta el VIN en un historial si es importado."
+    ],
+    alarmas: [
+      { nivel: "grave", texto: "Barro, arena o línea de agua bajo las alfombras o dentro de paneles." },
+      { nivel: "grave", texto: "Óxido en rieles de asientos, tornillos del tablero o conectores en un carro reciente." },
+      { nivel: "grave", texto: "Historial con flood o salvage (salvo que sea un proyecto propio sabiendo lo que es)." },
+      { nivel: "atencion", texto: "Alfombras nuevas en un carro usado sin explicación." },
+      { nivel: "atencion", texto: "Olor fuerte a ambientador." }
+    ],
+    dato: "Josefine Auto tiene una guía pública sobre esto: úsala para repasar y para explicar a los clientes por qué tus carros son confiables.",
+    preguntas: [
+      { p: "¿Dónde es muy difícil limpiar las señales de una inundación?", o: ["En la pintura", "En los rieles de los asientos y bajo las alfombras", "En los vidrios"], c: 1, e: "El barro y el óxido se quedan en lugares escondidos." },
+      { p: "Un carro usado tiene alfombras nuevas y huele mucho a ambientador. ¿Qué haces?", o: ["Nada", "Levanto alfombras y busco barro y óxido", "Lo compro rápido"], c: 1, e: "Son dos señales típicas de que se quiere esconder humedad." }
+    ]
+  },
+  {
+    id: "obd2",
+    titulo: "Escáner OBD2",
+    sistema: "Diagnóstico",
+    resumen: "Lo que la computadora del carro sabe y el vendedor no te dice.",
+    funciona: [
+      "Desde 1996 en EE. UU., los carros traen un conector de diagnóstico OBD2, casi siempre debajo del tablero, del lado del conductor. Con un escáner lees lo que la computadora ha detectado.",
+      "Los códigos de falla (DTC) tienen cinco caracteres. La letra dice el sistema: P = motor y transmisión, B = carrocería, C = chasis, U = comunicación entre computadoras. El primer número: 0 es un código genérico (igual en todas las marcas) y 1 es propio de la marca.",
+      "Los monitores de preparación (readiness) son pruebas que la computadora hace mientras se maneja. Si alguien borra los códigos o desconecta la batería, los monitores vuelven a quedar como 'no listos' hasta que el carro se maneje un tiempo. Por eso muchos monitores no listos son una señal de que se pudo borrar algo hace poco.",
+      "El freeze frame es una foto de los datos del motor en el momento en que saltó un código: velocidad, temperatura, revoluciones."
+    ],
+    partes: [
+      ["Conector OBD2", "Toma de 16 pines bajo el tablero."],
+      ["Códigos activos", "Fallas actuales: suelen encender el check engine."],
+      ["Códigos pendientes", "Fallas detectadas una vez, aún sin confirmar."],
+      ["Monitores", "Estado de las autopruebas: listo o no listo."],
+      ["Datos en vivo", "Temperatura, revoluciones, ajustes de combustible, voltaje…"]
+    ],
+    revisar: [
+      "Conecta el escáner con el contacto puesto antes de arrancar y luego con el motor encendido.",
+      "Lee códigos activos, pendientes y permanentes si tu escáner los muestra. Haz foto de la pantalla.",
+      "Mira los monitores: si varios están como no listos, pregunta si desconectaron la batería o borraron códigos.",
+      "En datos en vivo, mira la temperatura del refrigerante (debe subir y estabilizarse) y, si hay, la de la transmisión.",
+      "Busca cada código en la sección Códigos de esta app y apunta lo que significa en la Bitácora.",
+      "Recuerda: muchos escáneres básicos solo leen el motor. Códigos de airbag (B), ABS (C) o transmisión de marca pueden necesitar un escáner más completo o el taller."
+    ],
+    alarmas: [
+      { nivel: "grave", texto: "Check engine parpadeando: falla de encendido fuerte que puede dañar el catalizador." },
+      { nivel: "grave", texto: "Muchos monitores no listos y el vendedor no lo explica." },
+      { nivel: "atencion", texto: "Códigos pendientes: algo empieza a fallar." },
+      { nivel: "atencion", texto: "El vendedor dice que 'es solo un sensor': que lo diagnostique un taller antes de creerlo." }
+    ],
+    dato: "Un código dice qué detectó la computadora, no qué pieza cambiar. P0420 puede ser el catalizador, un sensor o una fuga de escape: el taller lo confirma.",
+    preguntas: [
+      { p: "¿Qué indica la P en un código como P0300?", o: ["Motor y transmisión", "Carrocería", "Comunicación"], c: 0, e: "P = powertrain: motor y transmisión." },
+      { p: "Varios monitores salen como 'no listos'. ¿Qué puede significar?", o: ["Que borraron códigos o desconectaron la batería hace poco", "Que el carro está perfecto", "Que no tiene gasolina"], c: 0, e: "Los monitores se reinician al borrar códigos y necesitan manejo para completarse." },
+      { p: "Un código P1xxx es…", o: ["Genérico, igual en todas las marcas", "Propio del fabricante"], c: 1, e: "El 0 es genérico; el 1 es específico de la marca." },
+      { p: "El check engine parpadea. ¿Qué haces?", o: ["Sigo la prueba normal", "Paro la prueba: falla de encendido fuerte", "Nada, es un sensor"], c: 1, e: "Parpadeando indica una falla que puede dañar el catalizador si sigues manejando." }
+    ]
+  },
+  {
+    id: "prueba",
+    titulo: "La prueba de manejo",
+    sistema: "Antes de empezar",
+    resumen: "20 minutos bien hechos te dicen más que una hora de charla.",
+    funciona: [
+      "La prueba junta todo: motor caliente, transmisión trabajando, frenos, suspensión, dirección y aire acondicionado al mismo tiempo. Muchos problemas solo aparecen con el carro en marcha y caliente.",
+      "Haz siempre el mismo recorrido si puedes: un tramo de ciudad con tráfico, baches o muertos, una recta para frenar y un tramo de carretera."
+    ],
+    partes: [
+      ["Arranque en frío", "Ruidos y humo."],
+      ["Ciudad", "Cambios a baja velocidad, temperatura en el tráfico con el aire puesto."],
+      ["Baches y muertos", "Suspensión."],
+      ["Recta segura", "Dirección y frenos."],
+      ["Carretera", "Cambios altos, ruidos de rodamientos, vibraciones a velocidad."]
+    ],
+    revisar: [
+      "Radio apagado. Escucha.",
+      "Arranca con suavidad y mira que los cambios entren limpios.",
+      "Gira a tope a los dos lados en un estacionamiento: ruidos de juntas homocinéticas o de dirección.",
+      "En recta: volante centrado y sin tirar. Frena suave y fuerte.",
+      "A velocidad de carretera: vibraciones en volante (balanceo, llantas) o en el asiento; zumbido que cambia al girar (rodamientos).",
+      "En el tráfico con el aire puesto: la temperatura del motor quieta.",
+      "Al volver: deja el motor en ralentí, abre el capó, escucha y huele. Luego mira debajo del carro: ¿goteos nuevos?",
+      "Vuelve a escanear: a veces aparecen códigos después de manejar."
+    ],
+    alarmas: [
+      { nivel: "grave", texto: "La temperatura sube, salta un testigo o la transmisión patina durante la prueba." },
+      { nivel: "atencion", texto: "Zumbido que cambia al girar a un lado u otro: rodamiento de rueda." },
+      { nivel: "atencion", texto: "Vibración a cierta velocidad: balanceo, llantas o rines." }
+    ],
+    dato: "Si el vendedor no deja hacer la prueba o la quiere hacer él, apúntalo. Tú decides el recorrido.",
+    preguntas: [
+      { p: "Escuchas un zumbido que cambia cuando giras a un lado u otro en carretera. ¿Qué puede ser?", o: ["Un rodamiento de rueda", "El aire acondicionado", "La batería"], c: 0, e: "Al girar se carga más una rueda y el ruido del rodamiento cambia." },
+      { p: "¿Por qué se vuelve a mirar debajo del carro después de la prueba?", o: ["Para ver goteos que salen con el motor caliente", "Por costumbre"], c: 0, e: "Con presión y temperatura, las fugas aparecen." }
+    ]
+  }
+];
+
+/* Diagnóstico por síntoma: lo que notas → causas probables → qué significa para la compra. */
+var SINTOMAS = [
+  { id: "humo-azul", grupo: "Humo", sintoma: "Humo azul por el escape", causas: ["Anillos de pistón gastados", "Sellos de válvulas gastados", "Turbo con fuga de aceite (si tiene turbo)"], gravedad: "grave", compra: "El motor quema aceite. Prueba de compresión en el taller o descartar." },
+  { id: "humo-blanco", grupo: "Humo", sintoma: "Humo blanco espeso que no se va", causas: ["Junta de culata dañada", "Culata deformada o fisurada por recalentamiento"], gravedad: "grave", compra: "Refrigerante quemándose. Se cruza con aceite lechoso y burbujas en el depósito. Descartar salvo proyecto." },
+  { id: "humo-negro", grupo: "Humo", sintoma: "Humo negro", causas: ["Mezcla demasiado rica", "Inyectores que gotean", "Sensor de flujo de aire u oxígeno", "Filtro de aire muy sucio"], gravedad: "atencion", compra: "Suele tener arreglo. Escanea y pide diagnóstico y presupuesto." },
+  { id: "vapor", grupo: "Humo", sintoma: "Vapor blanco fino al arrancar en frío", causas: ["Condensación normal del escape"], gravedad: "leve", compra: "Normal si desaparece al calentar el motor." },
+  { id: "golpeteo", grupo: "Ruidos", sintoma: "Golpeteo metálico profundo en el motor", causas: ["Cojinetes de biela o de cigüeñal gastados", "Falta de presión de aceite"], gravedad: "grave", compra: "Motor muy dañado. Descartar." },
+  { id: "tictac", grupo: "Ruidos", sintoma: "Tic-tac rápido arriba del motor", causas: ["Taqués o válvulas con holgura", "Nivel de aceite bajo", "Fuga en el múltiple de escape (suena como tic-tac)"], gravedad: "atencion", compra: "Si se va al calentar, suele ser menor. Si sigue, taller." },
+  { id: "chirrido-motor", grupo: "Ruidos", sintoma: "Chirrido al arrancar o al poner el aire", causas: ["Correa de accesorios floja o gastada", "Tensor o polea gastada"], gravedad: "leve", compra: "Mantenimiento menor. Se descuenta." },
+  { id: "chirrido-freno", grupo: "Ruidos", sintoma: "Chillido agudo al frenar", causas: ["Aviso de desgaste de las pastillas", "Pastillas cristalizadas"], gravedad: "atencion", compra: "Pastillas a cambiar pronto. Se descuenta." },
+  { id: "metal-freno", grupo: "Ruidos", sintoma: "Ruido de metal con metal al frenar", causas: ["Pastillas acabadas: el metal toca el disco"], gravedad: "grave", compra: "Frenos y probablemente discos. No es seguro manejarlo así. Se descuenta con presupuesto." },
+  { id: "clic-curva", grupo: "Ruidos", sintoma: "Clic-clic al girar a tope", causas: ["Junta homocinética gastada", "Guardapolvo roto que dejó entrar suciedad"], gravedad: "atencion", compra: "Reparación conocida. Se descuenta." },
+  { id: "zumbido", grupo: "Ruidos", sintoma: "Zumbido que sube con la velocidad", causas: ["Rodamiento de rueda", "Llantas con desgaste en parches", "Diferencial", "CVT (si el ruido sigue a las revoluciones)"], gravedad: "atencion", compra: "Taller para saber de dónde viene: el rodamiento es menor; la CVT, no." },
+  { id: "golpe-baches", grupo: "Ruidos", sintoma: "Golpes o crujidos en baches", causas: ["Links de la barra estabilizadora", "Bujes", "Rótulas", "Amortiguadores o sus bases"], gravedad: "atencion", compra: "Normalmente se repara. Pide revisión de suspensión en el elevador." },
+  { id: "vibra-freno", grupo: "Vibraciones", sintoma: "Vibra el volante al frenar", causas: ["Discos deformados"], gravedad: "atencion", compra: "Discos y pastillas. Se descuenta." },
+  { id: "vibra-velocidad", grupo: "Vibraciones", sintoma: "Vibra a cierta velocidad en carretera", causas: ["Llantas desbalanceadas", "Rin golpeado", "Llanta deformada", "Juntas o palier"], gravedad: "atencion", compra: "Empieza por balanceo y revisión de rines y llantas." },
+  { id: "tiembla-ralenti", grupo: "Vibraciones", sintoma: "El motor tiembla en ralentí", causas: ["Falla de encendido: bujía, bobina o inyector", "Soportes del motor rotos", "Fuga de vacío"], gravedad: "atencion", compra: "Escanea: códigos P030x dicen qué cilindro falla." },
+  { id: "tira-lado", grupo: "Manejo", sintoma: "Tira hacia un lado", causas: ["Alineación", "Presión distinta en las llantas", "Freno pegado", "Piezas de suspensión dañadas o chasis torcido"], gravedad: "atencion", compra: "Si con presión y alineación correctas sigue tirando, sospecha de choque." },
+  { id: "patina-trans", grupo: "Manejo", sintoma: "Suben las revoluciones y el carro no acelera", causas: ["Embrague gastado (manual)", "Transmisión automática o CVT dañada", "Nivel bajo de ATF"], gravedad: "grave", compra: "Embrague: reparación conocida. Automática o CVT: descartar o taller especializado." },
+  { id: "golpe-cambio", grupo: "Manejo", sintoma: "Golpe fuerte al cambiar o al poner D/R", causas: ["Problema interno de la transmisión", "ATF bajo o viejo", "Soportes del motor o de la caja"], gravedad: "grave", compra: "Taller antes de pagar." },
+  { id: "pedal-esponja", grupo: "Manejo", sintoma: "Pedal de freno esponjoso o que se hunde", causas: ["Aire en el sistema", "Fuga de líquido", "Bomba de frenos"], gravedad: "grave", compra: "Seguridad: no se maneja hasta revisar. Se descuenta con presupuesto." },
+  { id: "recalienta", grupo: "Temperatura", sintoma: "La temperatura sube en el tráfico", causas: ["Ventilador que no enciende", "Radiador tapado", "Termostato", "Bomba de agua", "Junta de culata"], gravedad: "grave", compra: "Puede ser barato o muy caro. Taller y prueba de gases en el refrigerante." },
+  { id: "aire-caliente", grupo: "Temperatura", sintoma: "El aire acondicionado no enfría", causas: ["Falta de gas por fuga", "Compresor", "Ventilador del condensador", "Problema eléctrico"], gravedad: "atencion", compra: "En Panamá baja mucho el valor. Diagnóstico con presupuesto." },
+  { id: "olor-dulce", grupo: "Olores", sintoma: "Olor dulce", causas: ["Fuga de refrigerante", "Radiador de la calefacción"], gravedad: "atencion", compra: "Busca fugas y revisa el nivel del depósito." },
+  { id: "olor-quemado", grupo: "Olores", sintoma: "Olor a aceite quemado", causas: ["Aceite goteando sobre el escape", "Tapa de válvulas con fuga"], gravedad: "atencion", compra: "Localiza la fuga. Suele tener arreglo." },
+  { id: "olor-humedad", grupo: "Olores", sintoma: "Olor a humedad o moho", causas: ["Filtro de cabina o evaporador sucio", "Filtración de agua por gomas", "Inundación"], gravedad: "atencion", compra: "Haz la revisión completa de inundación antes de seguir." },
+  { id: "olor-gasolina", grupo: "Olores", sintoma: "Olor a gasolina", causas: ["Fuga en líneas o inyectores", "Tapón del tanque", "Sistema de vapores (EVAP)"], gravedad: "grave", compra: "Riesgo de incendio si es una fuga. Localízala antes de manejar." },
+  { id: "testigo-motor", grupo: "Testigos", sintoma: "Check engine fijo", causas: ["Cualquier código del motor o emisiones: desde un tapón de gasolina mal cerrado hasta una falla seria"], gravedad: "atencion", compra: "Escanea siempre. El código decide." },
+  { id: "testigo-motor-parpadea", grupo: "Testigos", sintoma: "Check engine parpadeando", causas: ["Falla de encendido fuerte"], gravedad: "grave", compra: "Para la prueba. Puede dañar el catalizador." },
+  { id: "testigo-aceite", grupo: "Testigos", sintoma: "Testigo rojo de aceite", causas: ["Presión de aceite baja", "Nivel muy bajo", "Bomba de aceite o sensor"], gravedad: "grave", compra: "Apaga el motor. Riesgo de dañar el motor." },
+  { id: "testigo-bateria", grupo: "Testigos", sintoma: "Testigo de batería con el motor en marcha", causas: ["Alternador", "Correa rota o floja", "Cables"], gravedad: "grave", compra: "El carro no carga y se apagará. Mide con el multímetro." },
+  { id: "testigo-airbag", grupo: "Testigos", sintoma: "Testigo de airbag encendido o que nunca se enciende", causas: ["Falla del sistema", "Airbag disparado en un choque y no repuesto", "Testigo desconectado para esconderlo"], gravedad: "grave", compra: "Seguridad y posible choque. Escáner completo en el taller." },
+  { id: "testigo-abs", grupo: "Testigos", sintoma: "Testigo de ABS", causas: ["Sensor de rueda", "Anillo del sensor", "Módulo ABS"], gravedad: "atencion", compra: "Los frenos normales funcionan, pero el ABS no. Diagnóstico y descuento." },
+  { id: "testigo-temp", grupo: "Testigos", sintoma: "Testigo de temperatura", causas: ["Recalentamiento", "Nivel bajo de refrigerante"], gravedad: "grave", compra: "Apaga el motor. Ver Recalentamiento." }
+];
+
+/* Códigos genéricos frecuentes (definición estándar SAE J2012, ver FUENTES). */
+var CODIGOS = [
+  { c: "P0101", t: "Sensor de flujo de aire (MAF): rango o rendimiento", d: "Lectura del sensor de aire fuera de lo esperado. A veces es solo suciedad en el sensor o una fuga de aire.", g: "atencion" },
+  { c: "P0113", t: "Sensor de temperatura del aire de admisión: señal alta", d: "Sensor o su cable. Suele ser menor.", g: "leve" },
+  { c: "P0128", t: "Refrigerante por debajo de la temperatura de regulación del termostato", d: "El motor tarda en calentar: casi siempre el termostato se quedó abierto.", g: "leve" },
+  { c: "P0135", t: "Sensor de oxígeno (banco 1, sensor 1): circuito del calentador", d: "Falla el calentador del sensor de oxígeno antes del catalizador.", g: "leve" },
+  { c: "P0171", t: "Sistema demasiado pobre (banco 1)", d: "Entra más aire o menos combustible del debido: fuga de vacío, sensor MAF, bomba o inyectores.", g: "atencion" },
+  { c: "P0172", t: "Sistema demasiado rico (banco 1)", d: "Demasiado combustible: inyectores, presión de combustible o sensores.", g: "atencion" },
+  { c: "P0300", t: "Falla de encendido aleatoria o en varios cilindros", d: "Bujías, bobinas, inyectores, fugas de vacío o, en el peor caso, compresión baja.", g: "atencion" },
+  { c: "P0301", t: "Falla de encendido en el cilindro 1", d: "Del P0301 al P0308, el último número dice el cilindro. Bujía, bobina, inyector o compresión.", g: "atencion" },
+  { c: "P0335", t: "Sensor de posición del cigüeñal A: circuito", d: "Puede hacer que el motor se apague o no arranque.", g: "atencion" },
+  { c: "P0340", t: "Sensor de posición del árbol de levas: circuito", d: "Sensor o cable. Si viene con otros códigos de distribución, revisar cadena o correa.", g: "atencion" },
+  { c: "P0401", t: "Flujo insuficiente de la recirculación de gases (EGR)", d: "Conductos de la EGR tapados con carbón o válvula EGR.", g: "atencion" },
+  { c: "P0420", t: "Eficiencia del catalizador por debajo del umbral (banco 1)", d: "El catalizador no limpia lo suficiente. Puede ser el catalizador, un sensor de oxígeno o una fuga de escape.", g: "atencion" },
+  { c: "P0442", t: "Fuga pequeña en el sistema de vapores de combustible (EVAP)", d: "Muchas veces el tapón de la gasolina o una manguera.", g: "leve" },
+  { c: "P0455", t: "Fuga grande en el sistema de vapores de combustible (EVAP)", d: "Tapón suelto o ausente, manguera rota, válvula de purga.", g: "leve" },
+  { c: "P0500", t: "Sensor de velocidad del vehículo", d: "Puede afectar al velocímetro y a los cambios de una automática.", g: "atencion" },
+  { c: "P0505", t: "Sistema de control de ralentí", d: "Ralentí inestable: cuerpo de aceleración sucio o válvula de ralentí.", g: "leve" },
+  { c: "P0700", t: "Falla en el sistema de control de la transmisión", d: "La computadora de la transmisión guardó un código propio. Hace falta un escáner que lea la transmisión.", g: "grave" }
+];
+
+var GLOSARIO = [
+  ["ABS", "Sistema que evita que las ruedas se bloqueen al frenar fuerte."],
+  ["ATF", "Aceite de la transmisión automática."],
+  ["Banco 1 / banco 2", "En motores en V, cada fila de cilindros. El banco 1 es el que tiene el cilindro 1."],
+  ["Bujía", "Pieza que hace la chispa que enciende la mezcla."],
+  ["Catalizador", "Pieza del escape que reduce los gases contaminantes."],
+  ["Compresión (prueba de)", "Mide la presión que hace cada cilindro. Dice cómo están anillos, válvulas y junta de culata."],
+  ["Convertidor de par", "Une el motor con la transmisión automática."],
+  ["CVT", "Transmisión de variación continua: sin marchas fijas."],
+  ["DOT", "Código en el costado de la llanta. Los 4 últimos números: semana y año de fabricación."],
+  ["DTC", "Código de falla de la computadora (Diagnostic Trouble Code)."],
+  ["EGR", "Sistema que devuelve parte de los gases de escape al motor para reducir emisiones."],
+  ["EVAP", "Sistema que recoge los vapores de la gasolina."],
+  ["Freeze frame", "Foto de los datos del motor en el momento en que saltó un código."],
+  ["Junta de culata", "Sello entre el bloque y la culata."],
+  ["Junta homocinética", "Articulación que lleva la fuerza a una rueda que gira y sube y baja."],
+  ["Larguero", "Viga del chasis. Si está doblada o soldada, el carro tuvo un choque estructural."],
+  ["MAF", "Sensor que mide el aire que entra al motor."],
+  ["Monitores (readiness)", "Autopruebas de la computadora. 'No listos' puede indicar códigos borrados hace poco."],
+  ["Overspray", "Pintura que cayó donde no debía: señal de repintado."],
+  ["Ralentí", "El motor encendido sin acelerar."],
+  ["Rótula", "Articulación de la suspensión."],
+  ["Salvage / flood", "Marcas de historial en EE. UU.: pérdida total / inundado."],
+  ["Sensor de oxígeno", "Mide el oxígeno en el escape para ajustar la mezcla."],
+  ["Soportes del motor", "Gomas que sujetan el motor al chasis."],
+  ["Taqués", "Piezas que empujan las válvulas. Con holgura hacen tic-tac."],
+  ["Termostato", "Válvula que regula la temperatura del motor."],
+  ["Torre de amortiguador", "Zona de la carrocería donde se apoya la suspensión delantera."],
+  ["VIN", "Número de identificación del carro, de 17 caracteres."]
+];
+
+/* Fuentes de las cifras y definiciones técnicas usadas arriba. */
+var FUENTES = [
+  { tema: "Voltaje de batería en reposo (≈12,6 V; <12,2 V descargada) y de carga (≈13,8–14,4 V)", url: "https://haynes.com/en-us/tips-tutorials/how-test-car-battery", nombre: "Haynes: cómo probar la batería" },
+  { tema: "Código DOT: semana y año de fabricación de la llanta", url: "https://www.slashgear.com/1419676/numbers-tires-date-code/", nombre: "SlashGear: el código de fecha de las llantas" },
+  { tema: "Testigos de desgaste de las llantas y por qué importa el dibujo", url: "https://ford.com/support/how-tos/owner-resources/vehicle-maintenance/why-does-tread-wear-matter", nombre: "Ford: desgaste del dibujo" },
+  { tema: "Monitores 'no listos' tras borrar códigos o desconectar la batería", url: "https://www.tomorrowstechnician.com/why-readiness-monitors-matter-with-obd-ii/", nombre: "Tomorrow's Technician: monitores OBD2" },
+  { tema: "Estructura de los códigos (letra + 4 números) y definiciones genéricas", url: "https://www.edmunds.com/obd-dtc", nombre: "Edmunds: códigos OBD2" },
+  { tema: "Códigos de falla más frecuentes", url: "https://alldata.com/diy-ca/en/diy-tips/top-diagnostic-trouble-codes", nombre: "ALLDATA: códigos más comunes" },
+  { tema: "Checklist de compra de Josefine Auto (orden de inspección y casillas críticas)", url: "https://github.com/joseq11692-boop/JosefineAuto/blob/HEAD/docs/02-checklist-compra-panama.md", nombre: "Josefine Auto: checklist de compra" }
+];
+</script>
+  <script>
+/* Josefine Mecánica: app de estudio. Sin servidor: todo se guarda en el propio celular (localStorage). */
+(function () {
+  "use strict";
+
+  var CLAVE = "josefine-mecanica-v1";
+  var vista = document.getElementById("vista");
+  var titulo = document.getElementById("titulo");
+  var aviso = document.getElementById("aviso");
+
+  /* ---------- Datos guardados ---------- */
+  function vacio() { return { aprendidas: {}, quiz: { total: 0, aciertos: 0, fallos: {} }, bitacora: [] }; }
+  function cargar() {
+    try {
+      var d = JSON.parse(localStorage.getItem(CLAVE) || "null");
+      if (d && typeof d === "object") {
+        var base = vacio();
+        return {
+          aprendidas: d.aprendidas || base.aprendidas,
+          quiz: { total: (d.quiz && d.quiz.total) || 0, aciertos: (d.quiz && d.quiz.aciertos) || 0, fallos: (d.quiz && d.quiz.fallos) || {} },
+          bitacora: Array.isArray(d.bitacora) ? d.bitacora : []
+        };
+      }
+    } catch (e) { /* sin almacenamiento: se trabaja en memoria */ }
+    return vacio();
+  }
+  var datos = cargar();
+  function guardar() {
+    try { localStorage.setItem(CLAVE, JSON.stringify(datos)); return true; }
+    catch (e) { avisar("No se pudo guardar en este navegador."); return false; }
+  }
+
+  /* ---------- Utilidades ---------- */
+  function esc(s) {
+    return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+    });
+  }
+  function avisar(t) {
+    aviso.textContent = t; aviso.hidden = false;
+    clearTimeout(avisar.t); avisar.t = setTimeout(function () { aviso.hidden = true; }, 2600);
+  }
+  function leccion(id) { for (var i = 0; i < LECCIONES.length; i++) if (LECCIONES[i].id === id) return LECCIONES[i]; return null; }
+  function codigo(c) { for (var i = 0; i < CODIGOS.length; i++) if (CODIGOS[i].c === c) return CODIGOS[i]; return null; }
+  var ETIQUETA = { grave: "Grave", atencion: "Atención", leve: "Leve" };
+  function chip(nivel) { return '<span class="chip chip--' + nivel + '">' + ETIQUETA[nivel] + "</span>"; }
+  function hoy() { var d = new Date(); return d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0"); }
+  function nAprendidas() { return LECCIONES.filter(function (l) { return datos.aprendidas[l.id]; }).length; }
+  function todasLasPreguntas() {
+    var out = [];
+    LECCIONES.forEach(function (l) { l.preguntas.forEach(function (q, i) { out.push({ clave: l.id + ":" + i, leccion: l, q: q }); }); });
+    return out;
+  }
+  function nFallos() { return Object.keys(datos.quiz.fallos).filter(function (k) { return datos.quiz.fallos[k] > 0; }).length; }
+
+  /* ---------- Decodificador de códigos OBD2 (estructura SAE J2012) ---------- */
+  var SISTEMA_LETRA = { P: "Motor y transmisión (powertrain)", B: "Carrocería (airbags, cierre, confort)", C: "Chasis (ABS, suspensión, dirección)", U: "Comunicación entre computadoras" };
+  var SUBSISTEMA_P = {
+    "1": "Mezcla de aire y combustible (medición)", "2": "Mezcla de aire y combustible (inyectores)",
+    "3": "Encendido y fallas de encendido", "4": "Control de emisiones", "5": "Velocidad, ralentí y entradas auxiliares",
+    "6": "Computadora y salidas", "7": "Transmisión", "8": "Transmisión", "9": "Transmisión"
+  };
+  function decodificar(txt) {
+    var c = String(txt || "").trim().toUpperCase().replace(/\s+/g, "");
+    if (!/^[PBCU][0-3][0-9A-F]{3}$/.test(c)) return null;
+    var r = { codigo: c, sistema: SISTEMA_LETRA[c[0]] };
+    r.tipo = c[1] === "0" ? "Genérico: significa lo mismo en todas las marcas" :
+      c[1] === "1" ? "Propio del fabricante: búscalo para tu marca" :
+      c[1] === "2" && c[0] === "P" ? "Genérico (rango ampliado)" : "Mixto: genérico o del fabricante según el rango";
+    if (c[0] === "P" && (c[1] === "0" || c[1] === "1" || c[1] === "2")) r.sub = SUBSISTEMA_P[c[2]] || "";
+    r.conocido = codigo(c);
+    return r;
+  }
+
+  /* ---------- Vistas ---------- */
+  var rutas = {
+    inicio: vInicio, aprender: vAprender, leccion: vLeccion, diagnostico: vDiagnostico,
+    codigos: vCodigos, practicar: vPracticar, bitacora: vBitacora, revision: vRevision,
+    glosario: vGlosario, fuentes: vFuentes
+  };
+  var NAV = { inicio: "inicio", aprender: "aprender", leccion: "aprender", diagnostico: "diagnostico", codigos: "diagnostico", practicar: "practicar", bitacora: "bitacora", revision: "bitacora", glosario: "inicio", fuentes: "inicio" };
+
+  function render() {
+    var h = (location.hash || "#inicio").slice(1).split("/");
+    var ruta = rutas[h[0]] ? h[0] : "inicio";
+    var arg = h.slice(1).map(decodeURIComponent);
+    vista.innerHTML = "";
+    rutas[ruta].apply(null, arg);
+    document.querySelectorAll(".nav a").forEach(function (a) {
+      a.classList.toggle("activo", a.getAttribute("href") === "#" + NAV[ruta]);
+    });
+    window.scrollTo(0, 0);
+  }
+
+  function poner(t, html) { titulo.textContent = t; document.title = t + " · Josefine Mecánica"; vista.innerHTML = html; }
+
+  function vInicio() {
+    var n = nAprendidas(), total = LECCIONES.length;
+    var pct = datos.quiz.total ? Math.round(100 * datos.quiz.aciertos / datos.quiz.total) : 0;
+    var siguiente = LECCIONES.filter(function (l) { return !datos.aprendidas[l.id]; })[0];
+    poner("Inicio",
+      '<section class="tarjeta tarjeta--hero">' +
+        "<p class=\"etiqueta\">Escuela de mecánica de Josefine Auto</p>" +
+        "<h2>Aprende a revisar los carros que compras</h2>" +
+        "<p>Lecciones cortas por sistema, diagnóstico por síntoma, códigos del escáner, práctica y una bitácora para comparar lo que tú viste con lo que dice el taller.</p>" +
+      "</section>" +
+      '<section class="cifras">' +
+        '<div class="cifra"><b>' + n + "/" + total + "</b><span>lecciones aprendidas</span></div>" +
+        '<div class="cifra"><b>' + (datos.quiz.total ? pct + " %" : "—") + "</b><span>aciertos en práctica</span></div>" +
+        '<div class="cifra"><b>' + datos.bitacora.length + "</b><span>carros revisados</span></div>" +
+      "</section>" +
+      '<div class="barra" role="progressbar" aria-valuemin="0" aria-valuemax="' + total + '" aria-valuenow="' + n + '"><span style="width:' + Math.round(100 * n / total) + '%"></span></div>' +
+      (siguiente ?
+        '<a class="tarjeta tarjeta--enlace" href="#leccion/' + siguiente.id + '"><p class="etiqueta">Sigue por aquí</p><h3>' + esc(siguiente.titulo) + "</h3><p>" + esc(siguiente.resumen) + "</p></a>" :
+        '<section class="tarjeta"><h3>Todas las lecciones aprendidas</h3><p>Ahora practica con carros reales y apúntalos en la Bitácora.</p></section>') +
+      (nFallos() ? '<a class="tarjeta tarjeta--enlace" href="#practicar/fallos"><p class="etiqueta">Repaso</p><h3>' + nFallos() + " preguntas por repasar</h3><p>Las que fallaste. Repásalas hasta acertarlas.</p></a>" : "") +
+      '<section class="lista-enlaces">' +
+        '<a href="#diagnostico">Diagnóstico por síntoma<span>›</span></a>' +
+        '<a href="#codigos">Códigos del escáner OBD2<span>›</span></a>' +
+        '<a href="#glosario">Glosario<span>›</span></a>' +
+        '<a href="#fuentes">Fuentes de las cifras<span>›</span></a>' +
+      "</section>" +
+      (window.MODO_PAGINA ? '<section class="tarjeta"><h3>Copia de seguridad</h3><p class="suave">Tus avances viven solo en este navegador. Para descargar copias, usa la app instalable.</p></section>' :
+      '<section class="tarjeta" id="copia"><h3>Copia de seguridad</h3><p class="suave">Tus avances viven solo en este celular. Guarda una copia de vez en cuando.</p>' +
+        '<div class="botones"><button class="boton boton--sec" id="exportar">Descargar copia</button><label class="boton boton--sec">Cargar copia<input type="file" id="importar" accept="application/json,.json" hidden></label></div></section>')
+    );
+    if (!window.MODO_PAGINA) {
+      document.getElementById("exportar").onclick = exportar;
+      document.getElementById("importar").onchange = importar;
+    }
+  }
+
+  function vAprender() {
+    var grupos = {};
+    LECCIONES.forEach(function (l) { (grupos[l.sistema] = grupos[l.sistema] || []).push(l); });
+    var html = '<p class="suave">' + nAprendidas() + " de " + LECCIONES.length + " aprendidas. Marca cada lección al terminarla y haz su mini examen.</p>";
+    Object.keys(grupos).forEach(function (g) {
+      html += "<h2>" + esc(g) + '</h2><div class="lista">';
+      grupos[g].forEach(function (l) {
+        html += '<a class="fila" href="#leccion/' + l.id + '"><span class="fila__marca' + (datos.aprendidas[l.id] ? " hecha" : "") + '" aria-hidden="true"></span><span><b>' + esc(l.titulo) + "</b><small>" + esc(l.resumen) + "</small></span><span class=\"fila__flecha\">›</span></a>";
+      });
+      html += "</div>";
+    });
+    poner("Aprender", html);
+  }
+
+  function vLeccion(id) {
+    var l = leccion(id);
+    if (!l) { location.hash = "#aprender"; return; }
+    var i = LECCIONES.indexOf(l), sig = LECCIONES[i + 1];
+    var html =
+      '<a class="volver" href="#aprender">‹ Lecciones</a>' +
+      '<section class="tarjeta tarjeta--hero"><p class="etiqueta">' + esc(l.sistema) + "</p><h2>" + esc(l.titulo) + "</h2><p>" + esc(l.resumen) + "</p></section>" +
+      '<section class="tarjeta"><h3>Cómo funciona</h3>' + l.funciona.map(function (p) { return "<p>" + esc(p) + "</p>"; }).join("") + "</section>" +
+      '<section class="tarjeta"><h3>Las piezas</h3><dl class="piezas">' + l.partes.map(function (p) { return "<dt>" + esc(p[0]) + "</dt><dd>" + esc(p[1]) + "</dd>"; }).join("") + "</dl></section>" +
+      '<section class="tarjeta"><h3>Qué revisar al comprar</h3><ol class="pasos">' + l.revisar.map(function (p) { return "<li>" + esc(p) + "</li>"; }).join("") + "</ol></section>" +
+      '<section class="tarjeta"><h3>Señales de alarma</h3><ul class="alarmas">' + l.alarmas.map(function (a) { return "<li>" + chip(a.nivel) + "<span>" + esc(a.texto) + "</span></li>"; }).join("") + "</ul></section>" +
+      '<section class="tarjeta tarjeta--dato"><h3>Para la compra</h3><p>' + esc(l.dato) + "</p></section>" +
+      '<div class="botones">' +
+        '<a class="boton" href="#practicar/' + l.id + '">Mini examen (' + l.preguntas.length + ")</a>" +
+        '<button class="boton boton--sec" id="marcar">' + (datos.aprendidas[l.id] ? "✓ Aprendida" : "Marcar como aprendida") + "</button>" +
+      "</div>" +
+      (sig ? '<a class="tarjeta tarjeta--enlace" href="#leccion/' + sig.id + '"><p class="etiqueta">Siguiente</p><h3>' + esc(sig.titulo) + "</h3></a>" : "");
+    poner(l.titulo, html);
+    document.getElementById("marcar").onclick = function () {
+      if (datos.aprendidas[l.id]) delete datos.aprendidas[l.id]; else datos.aprendidas[l.id] = hoy();
+      guardar(); avisar(datos.aprendidas[l.id] ? "Lección marcada como aprendida" : "Marca quitada"); render();
+    };
+  }
+
+  function vDiagnostico() {
+    var grupos = [];
+    SINTOMAS.forEach(function (s) { if (grupos.indexOf(s.grupo) < 0) grupos.push(s.grupo); });
+    poner("Diagnóstico",
+      '<div class="pestanas"><a class="activa" href="#diagnostico">Síntomas</a><a href="#codigos">Códigos OBD2</a></div>' +
+      '<p class="suave">¿Qué notas en el carro? Busca el síntoma y mira las causas probables y qué significa para la compra.</p>' +
+      '<input class="campo" id="buscar" type="search" placeholder="Busca: humo, golpe, frenar, olor…" autocomplete="off">' +
+      '<div class="filtros" id="filtros"><button class="activo" data-g="">Todos</button>' + grupos.map(function (g) { return '<button data-g="' + esc(g) + '">' + esc(g) + "</button>"; }).join("") + "</div>" +
+      '<div id="resultados" class="lista-sintomas"></div>'
+    );
+    var grupo = "", q = document.getElementById("buscar");
+    function pintar() {
+      var t = q.value.trim().toLowerCase();
+      var lista = SINTOMAS.filter(function (s) {
+        if (grupo && s.grupo !== grupo) return false;
+        if (!t) return true;
+        return (s.sintoma + " " + s.causas.join(" ") + " " + s.compra).toLowerCase().indexOf(t) >= 0;
+      });
+      document.getElementById("resultados").innerHTML = lista.length ? lista.map(function (s) {
+        return '<details class="tarjeta sintoma"><summary>' + chip(s.gravedad) + "<b>" + esc(s.sintoma) + "</b></summary>" +
+          "<h4>Causas probables</h4><ul>" + s.causas.map(function (c) { return "<li>" + esc(c) + "</li>"; }).join("") + "</ul>" +
+          "<h4>Para la compra</h4><p>" + esc(s.compra) + "</p></details>";
+      }).join("") : '<p class="suave">Nada con esa búsqueda. Prueba con otra palabra.</p>';
+    }
+    q.oninput = pintar;
+    document.getElementById("filtros").onclick = function (e) {
+      var b = e.target.closest("button"); if (!b) return;
+      grupo = b.getAttribute("data-g");
+      this.querySelectorAll("button").forEach(function (x) { x.classList.toggle("activo", x === b); });
+      pintar();
+    };
+    pintar();
+  }
+
+  function vCodigos(inicial) {
+    poner("Códigos OBD2",
+      '<div class="pestanas"><a href="#diagnostico">Síntomas</a><a class="activa" href="#codigos">Códigos OBD2</a></div>' +
+      '<section class="tarjeta"><h3>Lee un código</h3><p class="suave">Escribe el código que te dio el escáner, por ejemplo P0420.</p>' +
+        '<input class="campo campo--codigo" id="cod" maxlength="5" placeholder="P0420" autocomplete="off" autocapitalize="characters" value="' + esc(inicial || "") + '">' +
+        '<div id="lectura" aria-live="polite"></div></section>' +
+      "<h2>Cómo se lee</h2>" +
+      '<section class="tarjeta"><div class="anatomia" aria-label="Partes de un código"><span><b>P</b>sistema</span><span><b>0</b>genérico o de marca</span><span><b>3</b>subsistema</span><span><b>00</b>falla concreta</span></div>' +
+        '<p class="suave">Un código dice qué detectó la computadora, no qué pieza cambiar. El taller lo confirma.</p></section>' +
+      "<h2>Códigos frecuentes</h2>" +
+      '<div class="lista">' + CODIGOS.map(function (k) {
+        return '<button class="fila fila--boton" data-c="' + k.c + '"><span class="codigo">' + k.c + "</span><span><b>" + esc(k.t) + "</b></span>" + chip(k.g) + "</button>";
+      }).join("") + "</div>"
+    );
+    var campo = document.getElementById("cod");
+    function leer() {
+      var r = decodificar(campo.value), out = document.getElementById("lectura");
+      if (!campo.value.trim()) { out.innerHTML = ""; return; }
+      if (!r) { out.innerHTML = '<p class="suave">Un código tiene una letra (P, B, C o U) y cuatro caracteres. Ejemplo: P0300.</p>'; return; }
+      out.innerHTML = '<dl class="piezas">' +
+        "<dt>Sistema</dt><dd>" + esc(r.sistema) + "</dd>" +
+        "<dt>Tipo</dt><dd>" + esc(r.tipo) + "</dd>" +
+        (r.sub ? "<dt>Zona</dt><dd>" + esc(r.sub) + "</dd>" : "") + "</dl>" +
+        (r.conocido ? '<div class="tarjeta tarjeta--dato">' + chip(r.conocido.g) + "<h3>" + esc(r.conocido.t) + "</h3><p>" + esc(r.conocido.d) + "</p></div>" :
+          '<p class="suave">No está en la lista de frecuentes. Búscalo con la marca y el modelo, o pregúntalo en el taller.</p>');
+    }
+    campo.oninput = leer;
+    vista.querySelectorAll("[data-c]").forEach(function (b) {
+      b.onclick = function () { campo.value = b.getAttribute("data-c"); leer(); campo.scrollIntoView({ behavior: "smooth", block: "center" }); };
+    });
+    leer();
+  }
+
+  /* Práctica: preguntas de una lección, de todas o solo las falladas. */
+  function vPracticar(modo) {
+    var pool = todasLasPreguntas();
+    var nombre = "Todas las lecciones";
+    if (modo === "fallos") { pool = pool.filter(function (x) { return datos.quiz.fallos[x.clave] > 0; }); nombre = "Repaso de fallos"; }
+    else if (modo && leccion(modo)) { pool = pool.filter(function (x) { return x.leccion.id === modo; }); nombre = leccion(modo).titulo; }
+    else modo = "";
+
+    if (!pool.length) {
+      poner("Practicar", menuPractica() + '<section class="tarjeta"><h3>Nada que repasar</h3><p>No tienes preguntas falladas pendientes. ¡Bien!</p></section>');
+      return;
+    }
+    pool = barajar(pool.slice());
+    var i = 0, bien = 0;
+
+    function pregunta() {
+      if (i >= pool.length) return fin();
+      var x = pool[i];
+      var orden = barajar(x.q.o.map(function (t, k) { return k; }));
+      poner("Practicar", menuPractica(modo) +
+        '<p class="suave">' + esc(nombre) + " · pregunta " + (i + 1) + " de " + pool.length + "</p>" +
+        '<section class="tarjeta"><p class="etiqueta">' + esc(x.leccion.titulo) + "</p><h3>" + esc(x.q.p) + "</h3>" +
+        '<div class="opciones">' + orden.map(function (k) { return '<button class="opcion" data-k="' + k + '">' + esc(x.q.o[k]) + "</button>"; }).join("") + "</div>" +
+        '<div id="explica" aria-live="polite"></div></section>');
+      vista.querySelectorAll(".opcion").forEach(function (b) {
+        b.onclick = function () {
+          var k = +b.getAttribute("data-k"), ok = k === x.q.c;
+          vista.querySelectorAll(".opcion").forEach(function (o) {
+            o.disabled = true;
+            if (+o.getAttribute("data-k") === x.q.c) o.classList.add("correcta");
+          });
+          if (!ok) b.classList.add("mala");
+          datos.quiz.total++;
+          if (ok) { datos.quiz.aciertos++; bien++; if (datos.quiz.fallos[x.clave]) datos.quiz.fallos[x.clave]--; }
+          else datos.quiz.fallos[x.clave] = (datos.quiz.fallos[x.clave] || 0) + 1;
+          if (datos.quiz.fallos[x.clave] === 0) delete datos.quiz.fallos[x.clave];
+          guardar();
+          document.getElementById("explica").innerHTML = '<p class="resultado ' + (ok ? "resultado--ok" : "resultado--mal") + '">' + (ok ? "¡Correcto!" : "No es esa.") + "</p><p>" + esc(x.q.e) + "</p>" +
+            '<button class="boton" id="siguiente">' + (i + 1 < pool.length ? "Siguiente" : "Ver resultado") + "</button>";
+          document.getElementById("siguiente").onclick = function () { i++; pregunta(); };
+        };
+      });
+    }
+    function fin() {
+      var l = leccion(modo), todo = bien === pool.length;
+      poner("Practicar", menuPractica(modo) +
+        '<section class="tarjeta tarjeta--hero"><p class="etiqueta">' + esc(nombre) + "</p><h2>" + bien + " de " + pool.length + "</h2><p>" +
+        (todo ? "Perfecto." : "Las falladas quedan en Repaso para la próxima.") + "</p></section>" +
+        '<div class="botones"><a class="boton" href="#practicar/' + (modo || "todas") + '" id="otra">Otra vez</a>' +
+        (l && todo && !datos.aprendidas[l.id] ? '<button class="boton boton--sec" id="marcar">Marcar lección como aprendida</button>' : "") + "</div>");
+      document.getElementById("otra").onclick = function (e) { e.preventDefault(); vPracticar(modo); };
+      var m = document.getElementById("marcar");
+      if (m) m.onclick = function () { datos.aprendidas[l.id] = hoy(); guardar(); avisar("Lección marcada como aprendida"); location.hash = "#leccion/" + l.id; };
+    }
+    pregunta();
+  }
+  function menuPractica(modo) {
+    return '<div class="filtros"><a class="' + (!modo || modo === "todas" ? "activo" : "") + '" href="#practicar">Todo</a>' +
+      '<a class="' + (modo === "fallos" ? "activo" : "") + '" href="#practicar/fallos">Repasar fallos (' + nFallos() + ")</a>" +
+      '<a href="#aprender">Por lección</a></div>';
+  }
+  function barajar(a) {
+    for (var i = a.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)), t = a[i]; a[i] = a[j]; a[j] = t; }
+    return a;
+  }
+
+  /* Bitácora: cada carro que revisas, lo que tú viste y lo que dijo el taller. */
+  var AREAS = [
+    ["papeles", "Papeles y VIN"], ["carroceria", "Carrocería y chasis"], ["inundacion", "Interior e inundación"],
+    ["motor", "Motor, aceite y refrigerante"], ["obd", "Escáner (códigos y monitores)"], ["manejo", "Prueba de manejo"],
+    ["llantas", "Llantas, frenos y suspensión"]
+  ];
+  var VEREDICTOS = { comprar: "Lo compraría", descuento: "Con descuento", descartar: "Lo descartaría" };
+
+  function vBitacora() {
+    var lista = datos.bitacora.slice().sort(function (a, b) { return (b.fecha || "").localeCompare(a.fecha || ""); });
+    poner("Bitácora",
+      '<p class="suave">Apunta cada carro que revises. Después compara tu diagnóstico con el del taller: así se aprende de verdad.</p>' +
+      '<a class="boton" href="#revision/nueva">+ Nueva revisión</a>' +
+      (lista.length ? '<div class="lista">' + lista.map(function (r) {
+        return '<a class="fila" href="#revision/' + esc(r.id) + '"><span><b>' + esc(r.carro || "Sin nombre") + "</b><small>" + esc(r.fecha || "") + (r.veredicto ? " · " + esc(VEREDICTOS[r.veredicto]) : "") + (r.taller ? " · con informe del taller" : "") + "</small></span><span class=\"fila__flecha\">›</span></a>";
+      }).join("") + "</div>" : '<section class="tarjeta"><h3>Aún no hay carros</h3><p>Cuando vayas a ver uno (aunque no lo compres), apúntalo aquí.</p></section>')
+    );
+  }
+
+  function vRevision(id) {
+    var nueva = id === "nueva";
+    var r = nueva ? { id: "r" + Date.now(), fecha: hoy(), carro: "", km: "", notas: {}, codigos: "", veredicto: "", taller: "", aprendi: "" } :
+      datos.bitacora.filter(function (x) { return x.id === id; })[0];
+    if (!r) { location.hash = "#bitacora"; return; }
+    var notas = r.notas || {};
+    poner(nueva ? "Nueva revisión" : "Revisión",
+      '<a class="volver" href="#bitacora">‹ Bitácora</a>' +
+      '<form id="form" class="formulario" autocomplete="off">' +
+        '<label>Carro (marca, modelo y año)<input class="campo" name="carro" required value="' + esc(r.carro) + '" placeholder="Toyota Corolla 2016"></label>' +
+        '<div class="dos"><label>Fecha<input class="campo" type="date" name="fecha" value="' + esc(r.fecha) + '"></label>' +
+        '<label>Km<input class="campo" name="km" inputmode="numeric" value="' + esc(r.km) + '"></label></div>' +
+        "<h2>Lo que yo vi</h2>" +
+        AREAS.map(function (a) { return "<label>" + a[1] + '<textarea class="campo" name="n-' + a[0] + '" rows="2">' + esc(notas[a[0]] || "") + "</textarea></label>"; }).join("") +
+        '<label>Códigos del escáner (separados por espacios)<input class="campo" name="codigos" value="' + esc(r.codigos) + '" placeholder="P0420 P0171" autocapitalize="characters"></label>' +
+        '<div id="codigos-leidos"></div>' +
+        "<fieldset><legend>Mi veredicto</legend>" + Object.keys(VEREDICTOS).map(function (k) {
+          return '<label class="radio"><input type="radio" name="veredicto" value="' + k + '"' + (r.veredicto === k ? " checked" : "") + "> " + VEREDICTOS[k] + "</label>";
+        }).join("") + "</fieldset>" +
+        "<h2>Lo que dijo el taller</h2>" +
+        '<label>Informe o presupuesto del mecánico<textarea class="campo" name="taller" rows="3">' + esc(r.taller) + "</textarea></label>" +
+        '<label>¿Qué aprendí? (lo que se me pasó o acerté)<textarea class="campo" name="aprendi" rows="3">' + esc(r.aprendi) + "</textarea></label>" +
+        '<div class="botones"><button class="boton" type="submit">Guardar</button>' + (nueva ? "" : '<button class="boton boton--peligro" type="button" id="borrar">Borrar</button>') + "</div>" +
+      "</form>"
+    );
+    var form = document.getElementById("form");
+    function leerCodigos() {
+      var cods = form.codigos.value.toUpperCase().split(/[\s,;]+/).filter(Boolean);
+      document.getElementById("codigos-leidos").innerHTML = cods.map(function (c) {
+        var d = decodificar(c);
+        if (!d) return '<p class="suave">' + esc(c) + ": no parece un código válido.</p>";
+        return '<p class="codigo-linea"><span class="codigo">' + esc(d.codigo) + "</span> " + esc(d.conocido ? d.conocido.t : d.sistema + (d.sub ? " · " + d.sub : "")) + "</p>";
+      }).join("");
+    }
+    form.codigos.oninput = leerCodigos; leerCodigos();
+    form.onsubmit = function (e) {
+      e.preventDefault();
+      r.carro = form.carro.value.trim(); r.fecha = form.fecha.value; r.km = form.km.value.trim();
+      r.codigos = form.codigos.value.trim().toUpperCase(); r.taller = form.taller.value.trim(); r.aprendi = form.aprendi.value.trim();
+      var v = form.querySelector("input[name=veredicto]:checked"); r.veredicto = v ? v.value : "";
+      r.notas = {}; AREAS.forEach(function (a) { var t = form["n-" + a[0]].value.trim(); if (t) r.notas[a[0]] = t; });
+      if (nueva) datos.bitacora.push(r);
+      if (guardar()) avisar("Revisión guardada");
+      location.hash = "#bitacora";
+    };
+    var b = document.getElementById("borrar");
+    if (b) b.onclick = function () {
+      confirmarAqui(b.parentNode, "¿Borrar esta revisión? No se puede deshacer.", "Sí, borrar", function () {
+        datos.bitacora = datos.bitacora.filter(function (x) { return x.id !== r.id; });
+        guardar(); avisar("Revisión borrada"); location.hash = "#bitacora";
+      });
+    };
+  }
+
+  function vGlosario() {
+    poner("Glosario",
+      '<a class="volver" href="#inicio">‹ Inicio</a><input class="campo" id="buscar" type="search" placeholder="Busca una palabra" autocomplete="off">' +
+      '<section class="tarjeta"><dl class="piezas" id="terminos"></dl></section>');
+    var q = document.getElementById("buscar");
+    function pintar() {
+      var t = q.value.trim().toLowerCase();
+      document.getElementById("terminos").innerHTML = GLOSARIO.filter(function (g) { return !t || (g[0] + " " + g[1]).toLowerCase().indexOf(t) >= 0; })
+        .map(function (g) { return "<dt>" + esc(g[0]) + "</dt><dd>" + esc(g[1]) + "</dd>"; }).join("");
+    }
+    q.oninput = pintar; pintar();
+  }
+
+  function vFuentes() {
+    poner("Fuentes",
+      '<a class="volver" href="#inicio">‹ Inicio</a><p class="suave">De dónde salen las cifras y definiciones técnicas de esta app. La app no da precios: el costo real lo da el presupuesto escrito del taller.</p>' +
+      '<div class="lista">' + FUENTES.map(function (f) {
+        return '<a class="fila" href="' + esc(f.url) + '" target="_blank" rel="noopener"><span><b>' + esc(f.nombre) + "</b><small>" + esc(f.tema) + "</small></span><span class=\"fila__flecha\">↗</span></a>";
+      }).join("") + "</div>");
+  }
+
+  /* Confirmación dentro de la página: los avisos del navegador (confirm) no funcionan en todas partes. */
+  function confirmarAqui(donde, texto, boton, alAceptar) {
+    var viejo = donde.querySelector(".confirmar"); if (viejo) viejo.remove();
+    var caja = document.createElement("div");
+    caja.className = "confirmar"; caja.setAttribute("role", "alert");
+    caja.innerHTML = "<p>" + esc(texto) + '</p><div class="botones"><button type="button" class="boton boton--peligro" data-si>' + esc(boton) + '</button><button type="button" class="boton boton--sec" data-no>Cancelar</button></div>';
+    donde.appendChild(caja);
+    caja.querySelector("[data-si]").onclick = alAceptar;
+    caja.querySelector("[data-no]").onclick = function () { caja.remove(); };
+    caja.querySelector("[data-no]").focus();
+  }
+
+  /* ---------- Copia de seguridad ---------- */
+  function exportar() {
+    var blob = new Blob([JSON.stringify(datos, null, 2)], { type: "application/json" });
+    var a = document.createElement("a");
+    a.href = URL.createObjectURL(blob); a.download = "josefine-mecanica-" + hoy() + ".json";
+    document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(function () { URL.revokeObjectURL(a.href); }, 1000);
+  }
+  function importar(e) {
+    var f = e.target.files[0]; if (!f) return;
+    var lector = new FileReader();
+    lector.onload = function () {
+      try {
+        var d = JSON.parse(lector.result);
+        if (!d || typeof d !== "object" || !d.quiz || !Array.isArray(d.bitacora)) throw new Error("formato");
+        confirmarAqui(document.getElementById("copia"), "Esto reemplaza tus avances actuales por los de la copia.", "Sí, cargar la copia", function () {
+          datos = { aprendidas: d.aprendidas || {}, quiz: { total: d.quiz.total || 0, aciertos: d.quiz.aciertos || 0, fallos: d.quiz.fallos || {} }, bitacora: d.bitacora };
+          guardar(); avisar("Copia cargada"); render();
+        });
+      } catch (err) { avisar("Ese archivo no es una copia de Josefine Mecánica."); }
+    };
+    lector.readAsText(f);
+  }
+
+  window.addEventListener("hashchange", render);
+  render();
+
+  if ("serviceWorker" in navigator && location.protocol === "https:") {
+    navigator.serviceWorker.register("sw.js").catch(function () { /* sin conexión offline: la app sigue funcionando */ });
+  }
+})();
+</script>
+</body>
+</html>
