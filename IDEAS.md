@@ -6,3 +6,4 @@ No se implementan sin el OK del dueño.
 - Fotos en la Bitácora (necesita publicar la app instalable: MEC-02).
 - Lecciones de modelos concretos que compra Josefine Auto (deportivos y japoneses): fallas típicas por modelo, con fuentes.
 - Lección de motores turbo, híbridos y diésel.
+- Añadir las portadas Racing y Mecánica (`instagram/`) al kit de Instagram de Josefine Auto (`web/kit/`, lista DESTACADAS de `generar-posts.js`).
